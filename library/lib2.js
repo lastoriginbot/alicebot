@@ -6,7 +6,7 @@ exports.name = {
   "lise" : "scissors lise",
   "maria of redemption" : "maria",
   "lilith" : "black lilith",
-  "cs perrault (aka ferro)" : "perrault"
+  "cs perrault (aka ferro)" : "perrault",
   "m-5 efreeti" : "efreeti",
   "t-3 leprechaun" : "leprechaun",
   "t2 brownie" : "brownie",

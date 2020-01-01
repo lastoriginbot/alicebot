@@ -75,5 +75,6 @@ function moduleIsAvailable(path) {
 }
 function nameChange(unit) {
   if (name[unit]) unit = name[unit];
+	return unit
 }
 module.exports = Skill;

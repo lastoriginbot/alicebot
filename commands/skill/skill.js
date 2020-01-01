@@ -282,7 +282,7 @@ function send4(message, pages) {
 		})
 	})
 }
-function send4(message, pages) {
+function send5(message, pages) {
 	let embed = pages[0]
 	embed.setFooter('React 1-2 for active skills, 3-5 for passive skills');
 	message.channel.send(embed).then(msg => {

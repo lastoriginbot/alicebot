@@ -1,0 +1,17 @@
+{
+  "name": "QuillBot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "discord.js-commando": "^0.10.0",
+    "printf": "^0.5.1",
+    "@gouch/to-title-case": "^2.2.1",
+  }
+}

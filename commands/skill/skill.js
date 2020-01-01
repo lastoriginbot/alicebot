@@ -54,18 +54,21 @@ class Skill extends commando.Command {
 							let sp1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(8)").html()
 							sp1 = te(sp1);
 							embed.addField(np1, sp1);
+							console.log(np1)
 						}
 						let np2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(12)").html()
 						if (np2 != "Passive 2: ") {
 							let sp2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(10)").html()
 							sp2 = te(sp2);
 							embed.addField(np2, sp2);
+							console.log(np2)
 						}
 						let np3 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(14)").html()
 						if (np3 != "Passive 3: ") {
 							let sp3 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(12)").html()
 							sp3 = te(sp3);
 							embed.addField(np3, sp3);
+							console.log(np3)
 						}
 						message.channel.send(embed)
 						break;

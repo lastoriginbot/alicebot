@@ -17,7 +17,7 @@ exports.name = {
   "efreeti" : "m-5 efreeti",
   "t3" : "t-3 leprechaun",
   "t-3" : "t-3 leprechaun",
-  "t3 leprechaun" : "t-3 leprechaun"
+  "t3 leprechaun" : "t-3 leprechaun",
   "leprechaun" : "t-3 leprechaun",
   "aa-7" : "impet",
   "aa-7 impet" : "impet",

@@ -40,24 +40,47 @@ class Image extends commando.Command {
 						request(link2, function(err, resp, html2) {
 							const $2 = cheerio.load(html2);
 							let img = $2("html body div:nth-child(11) div:nth-child(2) img").attr("src")
-							let embed = new Discord.RichEmbed()
-							embed.setTitle(name)
-							embed.setImage(img)
-							embed.setURL(link2)
-							pages.push(embed)
-							let siz2 = $2("html body div:nth-child(11) div:nth-child(5) div:nth-child(3) table tbody tr td div ul").find('li').length;
-							for (var j = 1; j < siz2; j++) {
-								let img2 = $2("html body div:nth-child(11) div:nth-child(5) div:nth-child(3) table tbody tr td div ul li:nth-child(" + j + ") a img").attr("src")
-								img2 = img2.split(".jpg")[0] + ".png"
-								let ii = img2.split("/thumbs/100")
-								img2 = ii[0] + ii[1]
-								let embed2 = new Discord.RichEmbed()
-								embed2.setTitle(name)
-								embed2.setImage(img2)
-								embed2.setURL(link2)
-								pages.push(embed2)
+							if (img != "https://rei.animecharactersdatabase.com/uploads/forum/1-1034931996.png") {
+								let embed = new Discord.RichEmbed()
+								embed.setTitle(name)
+								embed.setImage(img)
+								embed.setURL(link2)
+								pages.push(embed)
+								let siz2 = $2("html body div:nth-child(11) div:nth-child(5) div:nth-child(3) table tbody tr td div ul").find('li').length;
+								for (var j = 1; j < siz2; j++) {
+									let img2 = $2("html body div:nth-child(11) div:nth-child(5) div:nth-child(3) table tbody tr td div ul li:nth-child(" + j + ") a img").attr("src")
+									img2 = img2.split(".jpg")[0] + ".png"
+									let ii = img2.split("/thumbs/100")
+									img2 = ii[0] + ii[1]
+									let embed2 = new Discord.RichEmbed()
+									embed2.setTitle(name)
+									embed2.setImage(img2)
+									embed2.setURL(link2)
+									pages.push(embed2)
+								}
+								sende(message, pages);
 							}
-							sende(message, pages);
+							else {
+								img = $2("html body div:nth-child(11) div:nth-child(3) img").attr("src")
+								let embed = new Discord.RichEmbed()
+								embed.setTitle(name)
+								embed.setImage(img)
+								embed.setURL(link2)
+								pages.push(embed)
+								let siz2 = $2("html body div:nth-child(11) div:nth-child(6) div:nth-child(3) table tbody tr td div ul").find('li').length;
+								for (var j = 1; j < siz2; j++) {
+									let img2 = $2("html body div:nth-child(11) div:nth-child(6) div:nth-child(3) table tbody tr td div ul li:nth-child(" + j + ") a img").attr("src")
+									img2 = img2.split(".jpg")[0] + ".png"
+									let ii = img2.split("/thumbs/100")
+									img2 = ii[0] + ii[1]
+									let embed2 = new Discord.RichEmbed()
+									embed2.setTitle(name)
+									embed2.setImage(img2)
+									embed2.setURL(link2)
+									pages.push(embed2)
+								}
+								sende(message, pages);
+							}
 						})
 						break;
 					}

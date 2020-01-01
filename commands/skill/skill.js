@@ -1,7 +1,7 @@
 const commando = require('discord.js-commando');
 const Discord = require('discord.js');
 require('@gouch/to-title-case')
-var name = require('./library/lib.js').name;
+var name = require('../../library/lib.js').name;
 class Skill extends commando.Command {
     constructor(client) {
         super(client, {

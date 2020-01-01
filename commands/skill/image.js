@@ -27,8 +27,7 @@ class Image extends commando.Command {
 		var link = "https://docs.google.com/spreadsheets/u/2/d/e/2PACX-1vQVIjitQOW63fhQOqy31iWCeEWf44BuyVcRIB15YtB1PtoEOoh6rh9Mqw6CresP3ByK7Po6vpCQmqjn/pubhtml#"
 		request(link, function(err, resp, html) {
 			if (!err) {
-				pages = [];
-				check = false;
+				let pages = [];
 				const $ = cheerio.load(html);
 				let siz = $("html body div:nth-child(11) div:nth-child(5) div:nth-child(4) ul").find('li').length;
 				for (var i = 1; i < siz; i++){

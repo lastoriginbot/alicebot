@@ -22,7 +22,7 @@ class Skill extends commando.Command {
 	async run(message, { text }) {
 		var unit = text.toLowerCase().toTitleCase();
 		unit = nameChange(unit);
-		link = "https://docs.google.com/spreadsheets/u/2/d/e/2PACX-1vQVIjitQOW63fhQOqy31iWCeEWf44BuyVcRIB15YtB1PtoEOoh6rh9Mqw6CresP3ByK7Po6vpCQmqjn/pubhtml#"
+		var link = "https://docs.google.com/spreadsheets/u/2/d/e/2PACX-1vQVIjitQOW63fhQOqy31iWCeEWf44BuyVcRIB15YtB1PtoEOoh6rh9Mqw6CresP3ByK7Po6vpCQmqjn/pubhtml#"
 		request(link, function(err, resp, html) {
 			if (!err) {
 				const $ = cheerio.load(html);

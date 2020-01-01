@@ -22,6 +22,7 @@ class Skill extends commando.Command {
 	async run(message, { text }) {
 		var unit = text.toLowerCase().toTitleCase();
 		unit = nameChange(unit);
+		var check = false;
 		var link = "https://docs.google.com/spreadsheets/u/2/d/e/2PACX-1vQVIjitQOW63fhQOqy31iWCeEWf44BuyVcRIB15YtB1PtoEOoh6rh9Mqw6CresP3ByK7Po6vpCQmqjn/pubhtml#"
 		request(link, function(err, resp, html) {
 			if (!err) {
@@ -31,6 +32,7 @@ class Skill extends commando.Command {
 					let name = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td").html()
 					name = te(name)
 					if (name == unit) {
+						check = true;
 						let img = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td div img").attr("src")
 						let embed = new Discord.RichEmbed()
 						embed.setThumbnail(img)
@@ -68,9 +70,9 @@ class Skill extends commando.Command {
 						message.channel.send(embed)
 						break;
 					}
-					else {
-						message.channel.send("Wrong Name")
-					}
+				}
+				if (check == false) {
+					message.channel.send("Wrong Name")
 				}
 			}
 		})

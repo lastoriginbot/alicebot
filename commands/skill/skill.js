@@ -70,7 +70,7 @@ class Skill extends commando.Command {
 							let ap3 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(13) div img").attr("src")
 							pages = adde(img, np3, sp3, null, ap3, pages)
 						}
-						message.channel.send(embed)
+						sende(message, pages)
 						break;
 					}
 				}

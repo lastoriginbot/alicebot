@@ -31,12 +31,12 @@ class Skill extends commando.Command {
 				for (var i = 0; i < siz; i++){
 					let name = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td").html()
 					name = te(name)
-					if (name == unit) {
+					if (name.toLowerCase() == unit.toLowerCase()) {
 						check = true;
 						let img = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td div img").attr("src")
 						let embed = new Discord.RichEmbed()
 						embed.setThumbnail(img)
-						embed.setTitle(unit)
+						embed.setTitle(name)
 						let na1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(4)").html()
 						let sa1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(2)").html()
 						sa1 = te(sa1);

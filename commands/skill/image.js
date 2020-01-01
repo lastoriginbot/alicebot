@@ -24,7 +24,7 @@ class Image extends commando.Command {
 		var unit = text.toLowerCase();
 		unit = nameChange(unit);
 		var check = false;
-		var link = "https://www.animecharactersdatabase.com/source.php?id=106477"
+		var link = "https://www.animecharactersdatabase.com/allchars.php?id=106477&tile"
 		request(link, function(err, resp, html) {
 			if (!err) {
 				let pages = [];

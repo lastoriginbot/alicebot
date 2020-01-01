@@ -23,9 +23,8 @@ class Image extends commando.Command {
 	async run(message, { text }) {
 		var unit = text.toLowerCase();
 		unit = nameChange(unit);
-		console.log(unit);
 		var check = false;
-		var link = "https://docs.google.com/spreadsheets/u/2/d/e/2PACX-1vQVIjitQOW63fhQOqy31iWCeEWf44BuyVcRIB15YtB1PtoEOoh6rh9Mqw6CresP3ByK7Po6vpCQmqjn/pubhtml#"
+		var link = "https://www.animecharactersdatabase.com/source.php?id=106477"
 		request(link, function(err, resp, html) {
 			if (!err) {
 				let pages = [];
@@ -34,7 +33,6 @@ class Image extends commando.Command {
 				for (var i = 1; i < siz; i++){
 					let name = $("html body div:nth-child(11) div:nth-child(5) div:nth-child(4) ul li:nth-child(" + i + ") p a").html()
 					name = te(name)
-					console.log(name)
 					if (name.toLowerCase() == unit.toLowerCase()) {
 						check = true;
 						let link2 = $("html body div:nth-child(11) div:nth-child(5) div:nth-child(4) ul li:nth-child(" + i + ") p a").attr("href")

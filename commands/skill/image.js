@@ -34,6 +34,7 @@ class Image extends commando.Command {
 				for (var i = 1; i < siz; i++){
 					let name = $("html body div:nth-child(11) div:nth-child(5) div:nth-child(4) ul li:nth-child(" + i + ") p a").html()
 					name = te(name)
+					console.log(name)
 					if (name.toLowerCase() == unit.toLowerCase()) {
 						check = true;
 						let link2 = $("html body div:nth-child(11) div:nth-child(5) div:nth-child(4) ul li:nth-child(" + i + ") p a").attr("href")

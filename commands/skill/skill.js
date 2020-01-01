@@ -181,10 +181,10 @@ function send2(message, pages) {
 	let embed = pages[0]
 	embed.setFooter('React 1-2 for active skills');
 	message.channel.send(embed).then(msg => {
-		msg.react('<:one:>').then( r1 => {
-			msg.react('<:two:>')
-			const f1 = (reaction, user) => reaction.emoji.name === '<:one:>' && !user.bot;
-			const f2 = (reaction, user) => reaction.emoji.name === '<:two:>' && !user.bot;
+		msg.react('1️⃣').then( r1 => {
+			msg.react('2️⃣')
+			const f1 = (reaction, user) => reaction.emoji.name === '1️⃣' && !user.bot;
+			const f2 = (reaction, user) => reaction.emoji.name === '2️⃣' && !user.bot;
 			const ff1 = msg.createReactionCollector(f1, {timer: 6000});
 			const ff2 = msg.createReactionCollector(f2, {timer: 6000});
 			ff1.on('collect', r => {
@@ -206,12 +206,12 @@ function send3(message, pages) {
 	let embed = pages[0]
 	embed.setFooter('React 1-2 for active skills, 3 for passive skill');
 	message.channel.send(embed).then(msg => {
-		msg.react('<:one:>').then( r1 => {
-			msg.react('<:two:>').then( r2 => {
-				msg.react('<:three:>')
-				const f1 = (reaction, user) => reaction.emoji.name === '<:one:>' && !user.bot;
-				const f2 = (reaction, user) => reaction.emoji.name === '<:two:>' && !user.bot;
-				const f3 = (reaction, user) => reaction.emoji.name === '<:three:>' && !user.bot;
+		msg.react('1️⃣').then( r1 => {
+			msg.react('2️⃣').then( r2 => {
+				msg.react('3️⃣')
+				const f1 = (reaction, user) => reaction.emoji.name === '1️⃣' && !user.bot;
+				const f2 = (reaction, user) => reaction.emoji.name === '2️⃣' && !user.bot;
+				const f3 = (reaction, user) => reaction.emoji.name === '3️⃣' && !user.bot;
 				const ff1 = msg.createReactionCollector(f1, {timer: 6000});
 				const ff2 = msg.createReactionCollector(f2, {timer: 6000});
 				const ff3 = msg.createReactionCollector(f3, {timer: 6000});
@@ -241,14 +241,14 @@ function send4(message, pages) {
 	let embed = pages[0]
 	embed.setFooter('React 1-2 for active skills, 3-4 for passive skills');
 	message.channel.send(embed).then(msg => {
-		msg.react('<:one:>').then( r1 => {
-			msg.react('<:two:>').then( r2 => {
-				msg.react('<:three:>').then( r3 => {
-					msg.react('<:four:>')
-					const f1 = (reaction, user) => reaction.emoji.name === '<:one:>' && !user.bot;
-					const f2 = (reaction, user) => reaction.emoji.name === '<:two:>' && !user.bot;
-					const f3 = (reaction, user) => reaction.emoji.name === '<:three:>' && !user.bot;
-					const f4 = (reaction, user) => reaction.emoji.name === '<:four:>' && !user.bot;
+		msg.react('1️⃣').then( r1 => {
+			msg.react('2️⃣').then( r2 => {
+				msg.react('3️⃣').then( r3 => {
+					msg.react('4️⃣')
+					const f1 = (reaction, user) => reaction.emoji.name === '1️⃣' && !user.bot;
+					const f2 = (reaction, user) => reaction.emoji.name === '2️⃣' && !user.bot;
+					const f3 = (reaction, user) => reaction.emoji.name === '3️⃣' && !user.bot;
+					const f4 = (reaction, user) => reaction.emoji.name === '4️⃣' && !user.bot;
 					const ff1 = msg.createReactionCollector(f1, {timer: 6000});
 					const ff2 = msg.createReactionCollector(f2, {timer: 6000});
 					const ff3 = msg.createReactionCollector(f3, {timer: 6000});
@@ -286,15 +286,16 @@ function send5(message, pages) {
 	let embed = pages[0]
 	embed.setFooter('React 1-2 for active skills, 3-5 for passive skills');
 	message.channel.send(embed).then(msg => {
-		msg.react('<:one:>').then( r1 => {
-			msg.react('<:two:>').then( r2 => {
-				msg.react('<:three:>').then( r3 => {
-					msg.react('<:four:>').then( r4 => {
-						const f1 = (reaction, user) => reaction.emoji.name === '<:one:>' && !user.bot;
-						const f2 = (reaction, user) => reaction.emoji.name === '<:two:>' && !user.bot;
-						const f3 = (reaction, user) => reaction.emoji.name === '<:three:>' && !user.bot;
-						const f4 = (reaction, user) => reaction.emoji.name === '<:four:>' && !user.bot;
-						const f5 = (reaction, user) => reaction.emoji.name === '<:five:>' && !user.bot;
+		msg.react('1️⃣').then( r1 => {
+			msg.react('2️⃣').then( r2 => {
+				msg.react('3️⃣').then( r3 => {
+					msg.react('4️⃣').then( r4 => {
+						msg.react('5️⃣')
+						const f1 = (reaction, user) => reaction.emoji.name === '1️⃣' && !user.bot;
+						const f2 = (reaction, user) => reaction.emoji.name === '2️⃣' && !user.bot;
+						const f3 = (reaction, user) => reaction.emoji.name === '3️⃣' && !user.bot;
+						const f4 = (reaction, user) => reaction.emoji.name === '4️⃣' && !user.bot;
+						const f5 = (reaction, user) => reaction.emoji.name === '5️⃣' && !user.bot;
 						const ff1 = msg.createReactionCollector(f1, {timer: 6000});
 						const ff2 = msg.createReactionCollector(f2, {timer: 6000});
 						const ff3 = msg.createReactionCollector(f3, {timer: 6000});

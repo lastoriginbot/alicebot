@@ -207,7 +207,7 @@ exports.name = {
   "lind" : "p-29 lindwurm",
   "coco" : "coco & whiteshell",
   "audrey" : "audrey dreamweaver",
-  "dutch" "dutch girl",
+  "dutch" : "dutch girl",
   "serpent" : "frost serpent",
   "safety" : "miss safety",
   "express" : "express 76",

@@ -42,13 +42,13 @@ class Skill extends commando.Command {
 						sa1 = te(sa1);
 						let ra1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(3)").html()
 						ra1 = te(ra1);
-						embed.addField(na1, sa1 + "**Range/Cost: **" + ra1);
+						embed.addField(na1, sa1 + "\n**Range/Cost: **" + ra1);
 						let na2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(7)").html()
 						let sa2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(5)").html()
 						sa2 = te(sa2);
 						let ra2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(6)").html()
 						ra2 = te(ra2);
-						embed.addField(na2, sa2 + "**Range/Cost: **" + ra2);
+						embed.addField(na2, sa2 + "\n**Range/Cost: **" + ra2);
 						let np1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(10)").html()
 						if (np1 != "Passive 1: ") {
 							let sp1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(8)").html()
@@ -87,13 +87,13 @@ class Skill extends commando.Command {
 							sa1 = te(sa1);
 							let ra1 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(3)").html()
 							ra1 = te(ra1);
-							embed.addField(na1, sa1 + "**Range/Cost: **" + ra1);
+							embed.addField(na1, sa1 + "\n**Range/Cost: **" + ra1);
 							let na2 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(7)").html()
 							let sa2 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(5)").html()
 							sa2 = te(sa2);
 							let ra2 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(6)").html()
 							ra2 = te(ra2);
-							embed.addField(na2, sa2 + "**Range/Cost: **" + ra2);
+							embed.addField(na2, sa2 + "\n**Range/Cost: **" + ra2);
 							let np1 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(10)").html()
 							if (np1 != "Passive 1: ") {
 								let sp1 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(8)").html()

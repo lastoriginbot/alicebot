@@ -14,7 +14,7 @@ exports.name = {
   "perrault" : "cs perrault (aka ferro)",
   "ferro" : "cs perrault (aka ferro)",
   "m-5" : "m-5 efreeti",
-  "efreeti" : "m-5 efreeti"
+  "efreeti" : "m-5 efreeti",
   "t3" : "t-3 leprechaun",
   "t-3" : "t-3 leprechaun",
   "t3 leprechaun" : "t-3 leprechaun"

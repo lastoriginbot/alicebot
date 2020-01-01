@@ -62,7 +62,7 @@ class Skill extends commando.Command {
 							embed.addField(np2, sp2);
 						}
 						let np3 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(14)").html()
-						if (np1 != "Passive 3: ") {
+						if (np3 != "Passive 3: ") {
 							let sp3 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(12)").html()
 							sp3 = te(sp3);
 							embed.addField(np3, sp3);

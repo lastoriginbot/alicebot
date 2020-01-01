@@ -6,7 +6,7 @@ class Skill extends commando.Command {
     constructor(client) {
         super(client, {
             	name: 'skill',
-            	group: 'skill',
+            	group: 'find',
             	memberName: 'skill',
             	description: 'list all actives/passives of a unit',
 		args: [{

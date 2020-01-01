@@ -32,43 +32,42 @@ class Skill extends commando.Command {
 					let name = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td").html()
 					name = te(name)
 					if (name.toLowerCase() == unit.toLowerCase()) {
-						check = true;
+						
 						let img = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td div img").attr("src")
-						let embed = new Discord.RichEmbed()
-						embed.setThumbnail(img)
-						embed.setTitle(name)
 						let na1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(4)").html()
 						let sa1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(2)").html()
 						sa1 = te(sa1);
 						let ra1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(3)").html()
 						ra1 = te(ra1);
-						embed.addField(na1, sa1 + "\n**Range/Cost: **" + ra1);
+						let aa1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(4) div img").attr("src")
+						pages = adde(img, na1, sa1, ra1, aa1, pages)
 						let na2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(7)").html()
 						let sa2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(5)").html()
 						sa2 = te(sa2);
 						let ra2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(6)").html()
 						ra2 = te(ra2);
-						embed.addField(na2, sa2 + "\n**Range/Cost: **" + ra2);
+						let aa2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(7) div img").attr("src")
+						pages = adde(img, na2, sa2, ra2, aa2, pages)
 						let np1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(10)").html()
 						if (np1 != "Passive 1: " && np1 !="Passive 1 " && np1 != "Passive 1:" && np1 !="Passive 1") {
 							let sp1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(8)").html()
 							sp1 = te(sp1);
-							embed.addField(np1, sp1);
-							console.log(np1)
+							let ap1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(9) div img").attr("src")
+							pages = adde(img, np1, sp1, null, ap1, pages)
 						}
 						let np2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(12)").html()
 						if (np2 != "Passive 2: " && np2 !="Passive 2 " && np2 != "Passive 2:" && np2 !="Passive 2") {
 							let sp2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(10)").html()
 							sp2 = te(sp2);
-							embed.addField(np2, sp2);
-							console.log(np2)
+							let ap2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(11) div img").attr("src")
+							pages = adde(img, np2, sp2, null, ap2, pages)
 						}
 						let np3 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(14)").html()
 						if (np3 != "Passive 3: " && np3 !="Passive 3 " && np3 != "Passive 3:" && np3 !="Passive 3") {
 							let sp3 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(12)").html()
 							sp3 = te(sp3);
-							embed.addField(np3, sp3);
-							console.log(np3)
+							let ap3 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(13) div img").attr("src")
+							pages = adde(img, np3, sp3, null, ap3, pages)
 						}
 						message.channel.send(embed)
 						break;
@@ -81,41 +80,43 @@ class Skill extends commando.Command {
 						name = te(name)
 						if (name == unit) {
 							check = true;
+							let pages = [];
 							let img = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 1) + ") td div img").attr("src")
-							let embed = new Discord.RichEmbed()
-							embed.setThumbnail(img)
-							embed.setTitle(unit)
 							let na1 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(4)").html()
 							let sa1 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(2)").html()
 							sa1 = te(sa1);
 							let ra1 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(3)").html()
 							ra1 = te(ra1);
-							embed.addField(na1, sa1 + "\n**Range/Cost: **" + ra1);
+							let aa1 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(4) div img").attr("src")
+							pages = adde(img, na1, sa1, ra1, aa1, pages)
 							let na2 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(7)").html()
 							let sa2 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(5)").html()
 							sa2 = te(sa2);
 							let ra2 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(6)").html()
-							ra2 = te(ra2);
-							embed.addField(na2, sa2 + "\n**Range/Cost: **" + ra2);
+							let aa2 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(7) div img").attr("src")
+							pages = adde(img, na2, sa2, ra2, aa2, pages)
 							let np1 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(10)").html()
 							if (np1 != "Passive 1: " && np1 !="Passive 1 " && np1 != "Passive 1:" && np1 !="Passive 1") {
 								let sp1 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(8)").html()
 								sp1 = te(sp1);
-								embed.addField(np1, sp1);
+								let ap1 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(9) div img").attr("src")
+								pages = adde(img, np1, sp1, null, ap1, pages)
 							}
 							let np2 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(12)").html()
 							if (np2 != "Passive 2: " && np2 !="Passive 2 " && np2 != "Passive 2:" && np2 !="Passive 2") {
 								let sp2 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(10)").html()
 								sp2 = te(sp2);
-								embed.addField(np2, sp2);
+								let ap2 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(11) div img").attr("src")
+								pages = adde(img, np2, sp2, null, ap2, pages)
 							}
 							let np3 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(14)").html()
 							if (np3 != "Passive 3: " && np3 !="Passive 3 " && np3 != "Passive 3:" && np3 !="Passive 3") {
 								let sp3 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(12)").html()
 								sp3 = te(sp3);
-								embed.addField(np3, sp3);
+								let ap3 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(13) div img").attr("src")
+								pages = adde(img, np3, sp3, null, ap3, pages)
 							}
-							message.channel.send(embed)
+							sende(message, pages)
 							break;
 						}
 					}
@@ -142,5 +143,196 @@ function te(output) {
     return el != null && el != '' && el.substring(0,12) != "This ability";
   });
   return filtered.join("\n");
+}
+function adde(img, name, skill, range, aoe, pages) {
+	let embed = new Discord.RichEmbed()
+	embed.setThumbnail(img)
+	embed.setTitle(name)
+	embed.setDescription(skill)
+	if (range) {
+		embed.addField("Range/Cost", range);
+	}
+	if (aoe) {
+		embed.setImage(aoe)
+	}
+	else {
+		embed.addField("AoE", "Self")
+	}
+	pages.push(embed)
+	return pages
+}
+function sende(message, pages) {
+	if (pages.length == 2) {
+		send2(message, pages)
+	}
+	else if (pages.length == 3) {
+		send3(message, pages)
+	}
+	else if (pages.length == 4) {
+		send4(message, pages)
+	}
+	else if (pages.length == 5) {
+		send5(message, pages)
+	}
+	else {console.log("Send Error")}
+}
+function send2(message, pages) {
+	let embed = pages[0]
+	embed.setFooter('React 1-2 for active skills');
+	message.channel.send(embed).then(msg => {
+		msg.react(':one:').then( r1 => {
+			msg.react(':two:')
+			const f1 = (reaction, user) => reaction.emoji.name === ':one:' && !user.bot;
+			const f2 = (reaction, user) => reaction.emoji.name === ':two:' && !user.bot;
+			const ff1 = msg.createReactionCollector(f1, {timer: 6000});
+			const ff2 = msg.createReactionCollector(f2, {timer: 6000});
+			ff1.on('collect', r => {
+				r.remove(r1.users.filter(u => !u.bot).first());
+				embed = pages[0];
+				embed.setFooter('React 1-2 for active skills');
+				msg.edit(embed)
+			})
+			ff2.on('collect', r => {
+				r.remove(r.users.filter(u => !u.bot).first());
+            	embed = pages[1];
+            	embed.setFooter('React 1-2 for active skills');
+            	msg.edit(embed)
+			})
+		})
+	})
+}
+function send3(message, pages) {
+	let embed = pages[0]
+	embed.setFooter('React 1-2 for active skills, 3 for passive skill');
+	message.channel.send(embed).then(msg => {
+		msg.react(':one:').then( r1 => {
+			msg.react(':two:').then( r2 => {
+				msg.react(':three:')
+				const f1 = (reaction, user) => reaction.emoji.name === ':one:' && !user.bot;
+				const f2 = (reaction, user) => reaction.emoji.name === ':two:' && !user.bot;
+				const f3 = (reaction, user) => reaction.emoji.name === ':three:' && !user.bot;
+				const ff1 = msg.createReactionCollector(f1, {timer: 6000});
+				const ff2 = msg.createReactionCollector(f2, {timer: 6000});
+				const ff3 = msg.createReactionCollector(f3, {timer: 6000});
+				ff1.on('collect', r => {
+					r.remove(r.users.filter(u => !u.bot).first());
+					embed = pages[0];
+					embed.setFooter('React 1-2 for active skills, 3 for passive skill');
+					msg.edit(embed)
+				})
+				ff2.on('collect', r => {
+					r.remove(r.users.filter(u => !u.bot).first());
+					embed = pages[1];
+					embed.setFooter('React 1-2 for active skills, 3 for passive skill');
+					msg.edit(embed)
+				})
+				ff3.on('collect', r => {
+					r.remove(r.users.filter(u => !u.bot).first());
+					embed = pages[2];
+					embed.setFooter('React 1-2 for active skills, 3 for passive skill');
+					msg.edit(embed)
+				})
+			})
+		})
+	})
+}
+function send4(message, pages) {
+	let embed = pages[0]
+	embed.setFooter('React 1-2 for active skills, 3-4 for passive skills');
+	message.channel.send(embed).then(msg => {
+		msg.react(':one:').then( r1 => {
+			msg.react(':two:').then( r2 => {
+				msg.react(':three:').then( r3 => {
+					msg.react(':four:')
+					const f1 = (reaction, user) => reaction.emoji.name === ':one:' && !user.bot;
+					const f2 = (reaction, user) => reaction.emoji.name === ':two:' && !user.bot;
+					const f3 = (reaction, user) => reaction.emoji.name === ':three:' && !user.bot;
+					const f4 = (reaction, user) => reaction.emoji.name === ':four:' && !user.bot;
+					const ff1 = msg.createReactionCollector(f1, {timer: 6000});
+					const ff2 = msg.createReactionCollector(f2, {timer: 6000});
+					const ff3 = msg.createReactionCollector(f3, {timer: 6000});
+					const ff4 = msg.createReactionCollector(f4, {timer: 6000});
+					ff1.on('collect', r => {
+						r.remove(r.users.filter(u => !u.bot).first());
+						embed = pages[0];
+						embed.setFooter('React 1-2 for active skills, 3-4 for passive skills');
+						msg.edit(embed)
+					})
+					ff2.on('collect', r => {
+						r.remove(r.users.filter(u => !u.bot).first());
+						embed = pages[1];
+						embed.setFooter('React 1-2 for active skills, 3-4 for passive skills');
+						msg.edit(embed)
+					})
+					ff3.on('collect', r => {
+						r.remove(r.users.filter(u => !u.bot).first());
+						embed = pages[2];
+						embed.setFooter('React 1-2 for active skills, 3-4 for passive skills');
+						msg.edit(embed)
+					})
+					ff4.on('collect', r => {
+						r.remove(r.users.filter(u => !u.bot).first());
+						embed = pages[3];
+						embed.setFooter('React 1-2 for active skills, 3-4 for passive skills');
+						msg.edit(embed)
+					})
+				})
+			})
+		})
+	})
+}
+function send4(message, pages) {
+	let embed = pages[0]
+	embed.setFooter('React 1-2 for active skills, 3-5 for passive skills');
+	message.channel.send(embed).then(msg => {
+		msg.react(':one:').then( r1 => {
+			msg.react(':two:').then( r2 => {
+				msg.react(':three:').then( r3 => {
+					msg.react(':four:').then( r4 => {
+						const f1 = (reaction, user) => reaction.emoji.name === ':one:' && !user.bot;
+						const f2 = (reaction, user) => reaction.emoji.name === ':two:' && !user.bot;
+						const f3 = (reaction, user) => reaction.emoji.name === ':three:' && !user.bot;
+						const f4 = (reaction, user) => reaction.emoji.name === ':four:' && !user.bot;
+						const f5 = (reaction, user) => reaction.emoji.name === ':five:' && !user.bot;
+						const ff1 = msg.createReactionCollector(f1, {timer: 6000});
+						const ff2 = msg.createReactionCollector(f2, {timer: 6000});
+						const ff3 = msg.createReactionCollector(f3, {timer: 6000});
+						const ff4 = msg.createReactionCollector(f4, {timer: 6000});
+						const ff5 = msg.createReactionCollector(f5, {timer: 6000});
+						ff1.on('collect', r => {
+							r.remove(r.users.filter(u => !u.bot).first());
+							embed = pages[0];
+							embed.setFooter('React 1-2 for active skills, 3-5 for passive skills');
+							msg.edit(embed)
+						})
+						ff2.on('collect', r => {
+							r.remove(r.users.filter(u => !u.bot).first());
+							embed = pages[1];
+							embed.setFooter('React 1-2 for active skills, 3-5 for passive skills');
+							msg.edit(embed)
+						})
+						ff3.on('collect', r => {
+							r.remove(r.users.filter(u => !u.bot).first());
+							embed = pages[2];
+							embed.setFooter('React 1-2 for active skills, 3-5 for passive skills');
+							msg.edit(embed)
+						})
+						ff4.on('collect', r => {
+							r.remove(r.users.filter(u => !u.bot).first());
+							embed = pages[3];
+							embed.setFooter('React 1-2 for active skills, 3-5 for passive skills');
+							msg.edit(embed)
+						})
+						ff5.on('collect', r => {
+							r.remove(r.users.filter(u => !u.bot).first());
+							embed = pages[4];
+							embed.setFooter('React 1-2 for active skills, 3-5 for passive skills');
+							msg.edit(embed)
+						})
+					})
+				})
+			})
+		})
+	})
 }
 module.exports = Skill;

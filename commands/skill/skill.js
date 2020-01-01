@@ -56,14 +56,14 @@ class Skill extends commando.Command {
         let sp2 = require(path).sp2
         let ap2 = require(path).ap2
         des = sp2 + "\n***AoE***: " + ap2
-        embed.addField("Passive 1: " + np2, des);
+        embed.addField("Passive 2: " + np2, des);
       }
       let np3 = require(path).np3
       if (np3) {
         let sp3 = require(path).sp3
         let ap3 = require(path).ap3
         des = sp3 + "\n***AoE***: " + ap3
-        embed.addField("Passive 1: " + np3, des);
+        embed.addField("Passive 3: " + np3, des);
       }
        message.channel.send(embed)
 		}  

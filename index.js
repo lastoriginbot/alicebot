@@ -5,6 +5,9 @@ const bot = new commando.CommandoClient({
     disableEveryone: true,
     unknownCommandResponse: false
 });
+bot.on('ready', () => {
+    bot.user.setActivity('Only &skill, for now');
+});
 bot.registry.registerGroup('find', 'Find');
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands");

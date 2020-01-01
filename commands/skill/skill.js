@@ -37,33 +37,33 @@ class Skill extends commando.Command {
 						let embed = new Discord.RichEmbed()
 						embed.setThumbnail(img)
 						embed.setTitle(unit)
-						na1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(4)").html()
-						sa1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(2)").html()
+						let na1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(4)").html()
+						let sa1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(2)").html()
 						sa1 = te(sa1);
-						ra1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(3)").html()
+						let ra1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(3)").html()
 						ra1 = te(ra1);
 						embed.addField(na1, sa1 + "**Range/Cost: **" + ra1);
-						na2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(7)").html()
-						sa2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(5)").html()
+						let na2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(7)").html()
+						let sa2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(5)").html()
 						sa2 = te(sa2);
-						ra2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(6)").html()
+						let ra2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(6)").html()
 						ra2 = te(ra2);
 						embed.addField(na2, sa2 + "**Range/Cost: **" + ra2);
-						np1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(10)").html()
+						let np1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(10)").html()
 						if (np1 != "Passive 1: ") {
-							sp1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(8)").html()
+							let sp1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(8)").html()
 							sp1 = te(sp1);
 							embed.addField(np1, sp1);
 						}
-						np2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(12)").html()
+						let np2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(12)").html()
 						if (np2 != "Passive 2: ") {
-							sp2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(10)").html()
+							let sp2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(10)").html()
 							sp2 = te(sp2);
 							embed.addField(np2, sp2);
 						}
-						np3 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(14)").html()
+						let np3 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(14)").html()
 						if (np1 != "Passive 3: ") {
-							sp3 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(12)").html()
+							let sp3 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(12)").html()
 							sp3 = te(sp3);
 							embed.addField(np3, sp3);
 						}

@@ -71,6 +71,52 @@ class Skill extends commando.Command {
 						break;
 					}
 				}
+				if (check == false) { 
+					siz = $("html body div:nth-child(2) div:nth-child(3) div table tbody").find('tr').length /6;
+					for (var i = 0; i < siz; i++){
+						let name = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 1) + ") td").html()
+						name = te(name)
+						if (name == unit) {
+							check = true;
+							let img = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 1) + ") td div img").attr("src")
+							let embed = new Discord.RichEmbed()
+							embed.setThumbnail(img)
+							embed.setTitle(unit)
+							let na1 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(4)").html()
+							let sa1 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(2)").html()
+							sa1 = te(sa1);
+							let ra1 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(3)").html()
+							ra1 = te(ra1);
+							embed.addField(na1, sa1 + "**Range/Cost: **" + ra1);
+							let na2 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(7)").html()
+							let sa2 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(5)").html()
+							sa2 = te(sa2);
+							let ra2 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(6)").html()
+							ra2 = te(ra2);
+							embed.addField(na2, sa2 + "**Range/Cost: **" + ra2);
+							let np1 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(10)").html()
+							if (np1 != "Passive 1: ") {
+								let sp1 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(8)").html()
+								sp1 = te(sp1);
+								embed.addField(np1, sp1);
+							}
+							let np2 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(12)").html()
+							if (np2 != "Passive 2: ") {
+								let sp2 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(10)").html()
+								sp2 = te(sp2);
+								embed.addField(np2, sp2);
+							}
+							let np3 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(14)").html()
+							if (np1 != "Passive 3: ") {
+								let sp3 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(12)").html()
+								sp3 = te(sp3);
+								embed.addField(np3, sp3);
+							}
+							message.channel.send(embed)
+							break;
+						}
+					}
+				}
 				if (check == false) {
 					message.channel.send("Wrong Name")
 				}

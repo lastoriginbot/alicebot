@@ -42,13 +42,6 @@ class Skill extends commando.Command {
         let sp1 = require(path).sp1
         let ap1 = require(path).ap1
         des = sp1 + "\n***AoE***: " + ap1
-        embed.addField("Passive 1: " + na1, des);
-      }
-      let np1 = require(path).np1
-      if (np1) {
-        let sp1 = require(path).sp1
-        let ap1 = require(path).ap1
-        des = sp1 + "\n***AoE***: " + ap1
         embed.addField("Passive 1: " + np1, des);
       }
       let np2 = require(path).np2

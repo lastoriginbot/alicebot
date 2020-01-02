@@ -10,6 +10,7 @@ class Skill extends commando.Command {
         super(client, {
             	name: 'skill',
             	group: 'find',
+		aliases: ['s', 'skills'],
             	memberName: 'skill',
             	description: 'list all actives/passives of a unit',
 		args: [{

@@ -26,7 +26,7 @@ class Image extends commando.Command {
 		unit = nameChange(unit);
 		var check = false;
 		var link = "https://lastorigin.fandom.com/wiki/" + unit
-
+		console.log(link)
 
 		request(link, function(err, resp, html) {
 			if (!err) {

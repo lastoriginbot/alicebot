@@ -5,7 +5,7 @@ var cheerio = require('cheerio');
 var he = require('he');
 require('@gouch/to-title-case')
 var name = require('../../library/lib.js').name;
-var name2 = require('../../library/lib2.js').name;
+var name2 = require('../../library/lib3.js').name;
 class Image extends commando.Command {
     constructor(client) {
         super(client, {
@@ -25,69 +25,24 @@ class Image extends commando.Command {
 		var unit = text.toLowerCase();
 		unit = nameChange(unit);
 		var check = false;
-		var link = "https://www.animecharactersdatabase.com/allchars.php?id=106477&tile"
+		var link = "https://lastorigin.fandom.com/wiki/" + unit
+
+
 		request(link, function(err, resp, html) {
 			if (!err) {
+				let check = false;
 				let pages = [];
 				const $ = cheerio.load(html);
-				let siz = $("html body div:nth-child(11) div:nth-child(5) div:nth-child(4) ul").find('li').length;
-				for (var i = 1; i < siz; i++){
-					let name = $("html body div:nth-child(11) div:nth-child(5) div:nth-child(4) ul li:nth-child(" + i + ") p a").html()
-					name = te(name)
-					if (name.toLowerCase() == unit.toLowerCase()) {
-						check = true;
-						let link2 = $("html body div:nth-child(11) div:nth-child(5) div:nth-child(4) ul li:nth-child(" + i + ") p a").attr("href")
-						link2 = "https://www.animecharactersdatabase.com/" + link2
-						request(link2, function(err, resp, html2) {
-							const $2 = cheerio.load(html2);
-							let img = $2("html body div:nth-child(11) div:nth-child(2) img").attr("src")
-							if (img != "https://rei.animecharactersdatabase.com/uploads/forum/1-1034931996.png") {
-								let embed = new Discord.RichEmbed()
-								embed.setTitle(name)
-								embed.setImage(img)
-								embed.setURL(link2)
-								pages.push(embed)
-								let siz2 = $2("html body div:nth-child(11) div:nth-child(5) div:nth-child(3) table tbody tr td div ul").find('li').length;
-								for (var j = 1; j < siz2; j++) {
-									let img2 = $2("html body div:nth-child(11) div:nth-child(5) div:nth-child(3) table tbody tr td div ul li:nth-child(" + j + ") a img").attr("src")
-									img2 = img2.split(".jpg")[0] + ".png"
-									let ii = img2.split("/thumbs/100")
-									img2 = ii[0] + ii[1]
-									let embed2 = new Discord.RichEmbed()
-									embed2.setTitle(name)
-									embed2.setImage(img2)
-									embed2.setURL(link2)
-									pages.push(embed2)
-								}
-								sende(message, pages);
-							}
-							else {
-								img = $2("html body div:nth-child(11) div:nth-child(3) img").attr("src")
-								let embed = new Discord.RichEmbed()
-								embed.setTitle(name)
-								embed.setImage(img)
-								embed.setURL(link2)
-								pages.push(embed)
-								let siz2 = $2("html body div:nth-child(11) div:nth-child(6) div:nth-child(3) table tbody tr td div ul").find('li').length;
-								for (var j = 1; j < siz2; j++) {
-									let img2 = $2("html body div:nth-child(11) div:nth-child(6) div:nth-child(3) table tbody tr td div ul li:nth-child(" + j + ") a img").attr("src")
-									img2 = img2.split(".jpg")[0] + ".png"
-									let ii = img2.split("/thumbs/100")
-									img2 = ii[0] + ii[1]
-									let embed2 = new Discord.RichEmbed()
-									embed2.setTitle(name)
-									embed2.setImage(img2)
-									embed2.setURL(link2)
-									pages.push(embed2)
-								}
-								sende(message, pages);
-							}
-						})
-						break;
-					}
-				}
-				if (check == false) {message.channel.send("Wrong Name")}
-			}
+				$(".pi-item.pi-image").each(function(i, elem){
+			  		let img = $(elem).find("a").attr("href");
+			  		let embed.setTitle(unit)
+					embed.setImage(img)
+					embed.setURL(link)
+					pages.push(embed)
+				})
+				if (pages.length > 0) {sende(message, pages)}
+				else {message.channel.send("Wrong Name")}
+		      	}
 		})
 	}
 }

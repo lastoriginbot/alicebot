@@ -35,7 +35,8 @@ class Image extends commando.Command {
 				const $ = cheerio.load(html);
 				$(".pi-item.pi-image").each(function(i, elem){
 			  		let img = $(elem).find("a").attr("href");
-			  		let embed.setTitle(unit)
+			  		let embed = new Discord.RichEmbed()
+					embed.setTitle(unit)
 					embed.setImage(img)
 					embed.setURL(link)
 					pages.push(embed)

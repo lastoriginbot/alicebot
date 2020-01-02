@@ -11,7 +11,7 @@ class Image extends commando.Command {
         super(client, {
             	name: 'image',
             	group: 'find',
-		aliases: ['images', 'img', 'i', 'skin'. 'skins'],
+		aliases: ['images', 'img', 'i', 'skin', 'skins'],
             	memberName: 'image',
             	description: 'list all images of a unit',
 		args: [{

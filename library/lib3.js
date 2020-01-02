@@ -6,11 +6,11 @@ exports.name = {
 	"oberonia rhea" : "Rhea",
 	"scissors lise" : "Scissors Lise",
 	"daphne" : "Daphne",
-	"aqua" : "Aqua"
+	"aqua" : "Aqua",
 	"alexandra" : "Alexandra",
-	"sowan" : "Sowan"
+	"sowan" : "Sowan",
 	"maria of redemption" : "Maria",
-	"fotia" : "Fotia"
+	"fotia" : "Fotia",
 	"black lilith" : "Black Lilith",
 	"cs perrault (aka ferro)" : "Perrault",
 	"hachiko" : "Hachiko",

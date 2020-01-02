@@ -4,6 +4,7 @@ var request = require('request');
 var cheerio = require('cheerio');
 var he = require('he');
 require('@gouch/to-title-case')
+var urlencode = require('urlencode');
 var name = require('../../library/lib.js').name;
 var name2 = require('../../library/lib3.js').name;
 class Image extends commando.Command {
@@ -25,7 +26,7 @@ class Image extends commando.Command {
 		var unit = text.toLowerCase();
 		unit = nameChange(unit);
 		var check = false;
-		var link = "https://lastorigin.fandom.com/wiki/" + unit
+		var link = "https://lastorigin.fandom.com/wiki/" + urlencode(unit)
 		console.log(link)
 
 		request(link, function(err, resp, html) {

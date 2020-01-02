@@ -27,7 +27,7 @@ exports.name = {
 	"leona metalblood" : "Leona",
 	"t-8w valkyrie" : "Valkyrie",
 	"t-10 nymph" : "Nymph",
-	"gremlin" : "Gremlin"
+	"gremlin" : "Gremlin",
 	"gs-10 sandgirl" : "Sand Girl",
 	"cailleach bheur" : "Bheur",
 	"t-13 alvis" : "Alvis",

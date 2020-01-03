@@ -35,7 +35,7 @@ class Image extends commando.Command {
 				let pages = [];
 				const $ = cheerio.load(html);
 				$(".image.lightbox").each(function(i, elem){
-			  		let img = $(elem).find("img").attr("src");
+			  		let img = $(elem).find("img").attr("data-src");
 					img = img.split("/scale-to-width-down/")[0]
 					console.log(img)
 			  		let embed = new Discord.RichEmbed()

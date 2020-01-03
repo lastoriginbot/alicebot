@@ -55,7 +55,9 @@ class Equip extends commando.Command {
 						embed.setURL(link)
 						embed.addField("Effect", eff)
 						embed.addField("Note", note)
-						embed.setFooter("Effects within square brackets are applied as combat buffs/debuffs.");
+						embed.setFooter("Effects within square brackets are applied as combat buffs/debuffs.")
+						message.channel.send(embed)
+						break
 					}
 				}
 			}

@@ -41,7 +41,6 @@ class Equip extends commando.Command {
 				let siz = $(".wikitable.sortable tbody").find('tr').length
 				for (var i = 2; i<=siz; i++) {
 					let name = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(2)").html()
-					na2 = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(2)").html()
 					name = te(name)
 					if (name.toLowerCase() == gear) {
 						let img = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td a").attr('href')

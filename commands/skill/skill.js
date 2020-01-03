@@ -30,41 +30,41 @@ class Skill extends commando.Command {
 				const $ = cheerio.load(html);
 				let siz = $("html body div:nth-child(2) div:nth-child(2) div table tbody").find('tr').length /6;
 				for (var i = 0; i < siz; i++){
-					let name = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td").html()
+					let name = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(3)").html()
 					name = te(name)
 					if (name.toLowerCase() == unit.toLowerCase()) {
 						check = true;
 						let pages = [];
 						let img = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td div img").attr("src")
-						let na1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(4)").html()
+						let na1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(5)").html()
 						let sa1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(2)").html()
 						sa1 = te(sa1);
 						let ra1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(3)").html()
 						ra1 = te(ra1);
 						let aa1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(4) div img").attr("src")
 						pages = adde(img, na1, sa1, ra1, aa1, pages)
-						let na2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(7)").html()
+						let na2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(8)").html()
 						let sa2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(5)").html()
 						sa2 = te(sa2);
 						let ra2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(6)").html()
 						ra2 = te(ra2);
 						let aa2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(7) div img").attr("src")
 						pages = adde(img, na2, sa2, ra2, aa2, pages)
-						let np1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(10)").html()
+						let np1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(11)").html()
 						if (np1 != "Passive 1: " && np1 !="Passive 1 " && np1 != "Passive 1:" && np1 !="Passive 1") {
 							let sp1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(8)").html()
 							sp1 = te(sp1);
 							let ap1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(9) div img").attr("src")
 							pages = adde(img, np1, sp1, null, ap1, pages)
 						}
-						let np2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(12)").html()
+						let np2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(13)").html()
 						if (np2 != "Passive 2: " && np2 !="Passive 2 " && np2 != "Passive 2:" && np2 !="Passive 2") {
 							let sp2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(10)").html()
 							sp2 = te(sp2);
 							let ap2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(11) div img").attr("src")
 							pages = adde(img, np2, sp2, null, ap2, pages)
 						}
-						let np3 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(14)").html()
+						let np3 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(15)").html()
 						if (np3 != "Passive 3: " && np3 !="Passive 3 " && np3 != "Passive 3:" && np3 !="Passive 3") {
 							let sp3 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(12)").html()
 							sp3 = te(sp3);
@@ -78,7 +78,7 @@ class Skill extends commando.Command {
 				if (check == false) { 
 					siz = $("html body div:nth-child(2) div:nth-child(3) div table tbody").find('tr').length /6;
 					for (var i = 0; i < siz; i++){
-						let name = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 1) + ") td").html()
+						let name = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(3)").html()
 						name = te(name)
 						if (name == unit) {
 							check = true;

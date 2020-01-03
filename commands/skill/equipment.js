@@ -50,7 +50,7 @@ class Equip extends commando.Command {
 						note= te(note)
 						let embed = new Discord.RichEmbed()
 						embed.setTitle(name)
-						embed.setImage(img)
+						embed.setThumbnail(img)
 						embed.setURL(link)
 						embed.addField("Effect", eff)
 						embed.addField("Note", note)

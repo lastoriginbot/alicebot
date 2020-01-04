@@ -54,6 +54,7 @@ class Skill extends commando.Command {
 						if (np1 != "Passive 1: " && np1 !="Passive 1 " && np1 != "Passive 1:" && np1 !="Passive 1") {
 							let sp1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(8)").html()
 							sp1 = te(sp1);
+							np1 = te(np1;)
 							let ap1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(9) div img").attr("src")
 							pages = adde(img, np1, sp1, null, ap1, pages)
 						}
@@ -61,6 +62,7 @@ class Skill extends commando.Command {
 						if (np2 != "Passive 2: " && np2 !="Passive 2 " && np2 != "Passive 2:" && np2 !="Passive 2") {
 							let sp2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(10)").html()
 							sp2 = te(sp2);
+							np2 = te(np2);
 							let ap2 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(11) div img").attr("src")
 							pages = adde(img, np2, sp2, null, ap2, pages)
 						}
@@ -68,6 +70,7 @@ class Skill extends commando.Command {
 						if (np3 != "Passive 3: " && np3 !="Passive 3 " && np3 != "Passive 3:" && np3 !="Passive 3") {
 							let sp3 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(12)").html()
 							sp3 = te(sp3);
+							np3 = te(np3);
 							let ap3 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(13) div img").attr("src")
 							pages = adde(img, np3, sp3, null, ap3, pages)
 						}
@@ -101,6 +104,7 @@ class Skill extends commando.Command {
 							if (np1 != "Passive 1: " && np1 !="Passive 1 " && np1 != "Passive 1:" && np1 !="Passive 1") {
 								let sp1 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(8)").html()
 								sp1 = te(sp1);
+								np1 = te(np1);
 								let ap1 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(9) div img").attr("src")
 								pages = adde(img, np1, sp1, null, ap1, pages)
 							}
@@ -108,6 +112,7 @@ class Skill extends commando.Command {
 							if (np2 != "Passive 2: " && np2 !="Passive 2 " && np2 != "Passive 2:" && np2 !="Passive 2") {
 								let sp2 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(10)").html()
 								sp2 = te(sp2);
+								np2 = te(np2);
 								let ap2 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(11) div img").attr("src")
 								pages = adde(img, np2, sp2, null, ap2, pages)
 							}
@@ -115,6 +120,7 @@ class Skill extends commando.Command {
 							if (np3 != "Passive 3: " && np3 !="Passive 3 " && np3 != "Passive 3:" && np3 !="Passive 3") {
 								let sp3 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(12)").html()
 								sp3 = te(sp3);
+								np3 = te(np3);
 								let ap3 = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(13) div img").attr("src")
 								pages = adde(img, np3, sp3, null, ap3, pages)
 							}

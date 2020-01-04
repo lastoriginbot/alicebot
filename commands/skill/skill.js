@@ -54,7 +54,7 @@ class Skill extends commando.Command {
 						if (np1 != "Passive 1: " && np1 !="Passive 1 " && np1 != "Passive 1:" && np1 !="Passive 1") {
 							let sp1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(8)").html()
 							sp1 = te(sp1);
-							np1 = te(np1;)
+							np1 = te(np1);
 							let ap1 = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 2) + ") td:nth-child(9) div img").attr("src")
 							pages = adde(img, np1, sp1, null, ap1, pages)
 						}

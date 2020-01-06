@@ -2,7 +2,7 @@ exports.name = {
 	"labiata" : "Labiata",
 	"constantia s2" : "Constantia",
 	"serapias alice" : "Alice", 
-	"Vanilla a1" : "Vanilla",
+	"vanilla a1" : "Vanilla",
 	"oberonia rhea" : "Rhea",
 	"scissors lise" : "Scissors Lise",
 	"daphne" : "Daphne",

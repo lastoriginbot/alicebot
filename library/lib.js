@@ -9,7 +9,7 @@ exports.name = {
   "rhea" : "oberonia rhea",
   "lise" : "scissors lise",
   "maria" : "maria of redemption",
-  "fotia" : "fotia at the fireside"
+  "fotia" : "fotia at the fireside",
   "lilith" : "black lilith",
   "cs" : "cs perrault (aka ferro)",
   "cs perrault" : "cs perrault (aka ferro)",

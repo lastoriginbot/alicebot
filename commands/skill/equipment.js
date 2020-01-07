@@ -25,6 +25,7 @@ class Equip extends commando.Command {
 	async run(message, { text }) {
 		var gear = text.toLowerCase()
 		gear = nameChange(gear)
+		gear = gear.toLowerCase()
 		var li = gear.split(" ")
 		var li2 = li[li.length-1]
 		var link 

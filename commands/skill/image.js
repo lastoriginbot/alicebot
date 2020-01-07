@@ -34,6 +34,7 @@ class Image extends commando.Command {
 				let check = false;
 				let pages = [];
 				const $ = cheerio.load(html);
+				if ($(".unitname").html()) {unit = te($(".unitname").html())}
 				$(".image.lightbox").each(function(i, elem){
 			  		let img = $(elem).find("img").attr("data-src");
 					img = img.split("/scale-to-width-down/")[0]

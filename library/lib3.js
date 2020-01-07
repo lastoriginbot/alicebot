@@ -98,5 +98,5 @@ exports.name = {
 	"lancer mina" : "Mina",
 	"empress" : "Empress",
 	"faucre" : "Faucre",
-	"k180 seljuk" : "Seljuq",
+	"k180 seljuk" : "Seljuq"
 }

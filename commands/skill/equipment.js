@@ -6,7 +6,7 @@ var he = require('he');
 require('@gouch/to-title-case')
 var urlencode = require('urlencode');
 var name = require('../../library/lib.js').name;
-var name2 = require('../../library/lib3.js').name;
+var name2 = require('../../library/equip.js').name;
 class Equip extends commando.Command {
     constructor(client) {
         super(client, {
@@ -24,6 +24,7 @@ class Equip extends commando.Command {
     }
 	async run(message, { text }) {
 		var gear = text.toLowerCase()
+		gear = nameChange(gear)
 		var li = gear.split(" ")
 		var li2 = li[li.length-1]
 		var link 
@@ -37,12 +38,14 @@ class Equip extends commando.Command {
 
 		request(link, function(err, resp, html) {
 			if (!err) {
+				var check = false
 				const $ = cheerio.load(html);
 				let siz = $(".wikitable.sortable tbody").find('tr').length
 				for (var i = 2; i<=siz; i++) {
 					let name = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(2)").html()
 					name = te(name)
 					if (name.toLowerCase() == gear) {
+						check = true
 						let img = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td a").attr('href')
 						let eff = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(3)").html()
 						eff= te(eff)
@@ -59,12 +62,13 @@ class Equip extends commando.Command {
 						break
 					}
 				}
+				if (!check) {message.channel.send("Wrong name")}
 			}
 		})
 	}
 }
 function nameChange(unit) {
-	if (name[unit]) {unit = name[unit];}
+	if (name2[unit]) {unit = name2[unit];}
 	return unit
 }
 function te(output) {

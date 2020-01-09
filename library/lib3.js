@@ -100,5 +100,20 @@ exports.name = {
 	"lancer mina" : "Mina",
 	"empress" : "Empress",
 	"faucre" : "Faucre",
-	"k180 seljuk" : "Seljuq"
+	"s12 shade" : "Shade",
+	"aeda type-g" : "Aeda",
+	"cm67 stinger" : "Stinger",
+	"tommy walker" : "Tommy Walker",
+	"drone 08" : "Drone",
+	"ct66 rampart" : "Rampart",
+	"sd3m pupp head" : "Pupp Head",
+	"hq1 albatross" : "Albatross",
+	"k180 seljuk" : "Seljuq",
+	"s5 gigantes" : "Gigantes",
+	"ct2199w fallen" : "Fallen",
+	"s25 spartan captain" : "Spartan Captain",
+	"s25a spartan assault" : "Spartan Assault",
+	"s25b spartan bomber" : "Spartan Bomber",
+	"rf87 roc" : "Roc",
+	"ct-103 fortress"  : "Fortress"
 }

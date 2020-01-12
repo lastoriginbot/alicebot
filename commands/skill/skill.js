@@ -81,7 +81,7 @@ class Skill extends commando.Command {
 				}
 				if (check == false) { 
 					siz = $("html body div:nth-child(2) div:nth-child(3) div table tbody").find('tr').length /6;
-					for (var i = 0; i < siz -1; i++){
+					for (var i = 0; i < siz; i++){
 						let name = $("html body div:nth-child(2) div:nth-child(3) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(3)").html()
 						name = te(name)
 						if (name.toLowerCase() == unit.toLowerCase()) {

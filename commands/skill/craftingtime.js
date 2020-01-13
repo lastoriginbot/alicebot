@@ -40,6 +40,7 @@ class Time extends commando.Command {
 						let link2 = "https://lastorigin.fandom.com/wiki/" + urlencode(unit)
 						let img = $(".mw-content-ltr.mw-content-text table tbody tr:nth-child(" +i+ ") td:nth-child(1) div a img").attr("src")
 						img = img.split("/scale-to-width-down/")[0]
+						img = img + "/scale-to-width-down/120"
 						console.log(img)
 						let embed = new Discord.RichEmbed()
 						embed.setTitle(unit)
@@ -59,9 +60,9 @@ class Time extends commando.Command {
             						pages.push($(".mw-content-ltr.mw-content-text table tbody tr:nth-child(" +i+ ") td:nth-child(4)").text().trim())
             					}
 					}
+					if (pages.length > 0) {message.channel.send(pages.join("\n"))}
+					else {message.channel.send("Wrong Input")}
 				}
-				if (pages.length > 0) {message.channel.send(pages.join("\n"))}
-				else {message.channel.send("Wrong Input")}
       			}
     		})
 	}

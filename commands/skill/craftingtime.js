@@ -31,18 +31,87 @@ class Time extends commando.Command {
 				let check = false;
 				let pages = [];
 				const $ = cheerio.load(html);
-        let siz = $(".mw-content-ltr.mw-content-text table tbody").find("tr").length;
-        for (var i =2 ; i<=siz; i++) {
-          let ti = $(".mw-content-ltr.mw-content-text table tbody tr:nth-child(" +i+ ") td:nth-child(4)").text()
-          if (time.toLowerCase() == ti.trim().toLowerCase())
-          {
-            pages.push($(".mw-content-ltr.mw-content-text table tbody tr:nth-child(" +i+ ") td:nth-child(2)").text().trim())
-            }
-        }
-        if (pages.length > 0) {message.channel.send(pages.join("\n"))}
-        else {message.channel.send("Wrong Time Input")}
-      }
-    })
+        			let siz = $(".mw-content-ltr.mw-content-text table tbody").find("tr").length;
+        			for (var i =2 ; i<=siz; i++) {
+          				let ti = $(".mw-content-ltr.mw-content-text table tbody tr:nth-child(" +i+ ") td:nth-child(4)").text()
+          				if (time.toLowerCase() == ti.trim().toLowerCase())
+          				{
+						let unit = $(".mw-content-ltr.mw-content-text table tbody tr:nth-child(" +i+ ") td:nth-child(2)").text().trim()
+						let link2 = "https://lastorigin.fandom.com/wiki/" + urlencode(unit)
+						let img = $(".mw-content-ltr.mw-content-text table tbody tr:nth-child(" +i+ ") td:nth-child(1) div a img").attr("src")
+						img = img.split("/scale-to-width-down/")[0]
+						console.log(img)
+						let embed = new Discord.RichEmbed()
+						embed.setTitle(unit)
+						embed.setImage(img)
+						embed.setURL(link2)
+						pages.push(embed)
+            				}
+				}
+        			if (pages.length > 0) {sende(message, pages)}
+        			else {
+					let unit = nameChange(time);
+					let siz = $(".mw-content-ltr.mw-content-text table tbody").find("tr").length;
+        				for (var i =2 ; i<=siz; i++) {
+          					let na = $(".mw-content-ltr.mw-content-text table tbody tr:nth-child(" +i+ ") td:nth-child(2)").text().trim()
+          					if (unit.toLowerCase() == na.toLowerCase())
+          					{
+            						pages.push($(".mw-content-ltr.mw-content-text table tbody tr:nth-child(" +i+ ") td:nth-child(4)").text().trim())
+            					}
+					}
+				}
+				if (pages.length > 0) {message.channel.send(pages.join("\n"))}
+				else {message.channel.send("Wrong Input")}
+      			}
+    		})
 	}
+}
+function nameChange(unit) {
+	if (name[unit]) {unit = name[unit];}
+	if (name2[unit]) {unit = name2[unit];}
+	return unit
+}
+function sende(message, pages) {
+	var embed = pages[0];
+	let page = 1;
+	embed = pages[0];
+	embed.setFooter('Page ' + page + ' of ' + pages.length);
+	if (pages.length != 1) {
+		message.channel.send(embed).then(msg => {
+			msg.react('⬅️').then( r => {
+				msg.react('➡️')
+
+				// Filters
+				const backwardsFilter = (reaction, user) => reaction.emoji.name === '⬅️' && !user.bot;
+				const forwardsFilter = (reaction, user) => reaction.emoji.name === '➡️' && !user.bot;
+
+				const backwards = msg.createReactionCollector(backwardsFilter, {timer: 6000});
+				const forwards = msg.createReactionCollector(forwardsFilter, {timer: 6000});
+
+				backwards.on('collect', r => {
+				r.remove(r.users.filter(u => !u.bot).first());
+					if (page === 1) {
+						page = pages.length + 1;
+					}
+					page--;
+						embed = pages[page-1];
+						embed.setFooter('Page ' + page + ' of ' + pages.length);
+						msg.edit(embed)
+				})
+
+				forwards.on('collect', r => {
+				r.remove(r.users.filter(u => !u.bot).first());
+						if (page === pages.length) {
+							page = 0;
+						}
+						page++;
+						embed = pages[page-1];
+						embed.setFooter('Page ' + page + ' of ' + pages.length);
+						msg.edit(embed)
+				})
+			})
+		})
+	}
+	else {message.channel.send(embed)}
 }
 module.exports = Time;

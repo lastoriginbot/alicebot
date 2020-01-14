@@ -39,7 +39,9 @@ class Time extends commando.Command {
 						let unit = $(".mw-content-ltr.mw-content-text table tbody tr:nth-child(" +i+ ") td:nth-child(2)").text().trim()
 						let link2 = "https://lastorigin.fandom.com/wiki/" + urlencode(unit)
 						let img = $(".mw-content-ltr.mw-content-text table tbody tr:nth-child(" +i+ ") td:nth-child(1) div a img").attr("data-src")
-						if (!img) {$(".mw-content-ltr.mw-content-text table tbody tr:nth-child(" +i+ ") td:nth-child(1) div a img").attr("src")}
+						if (!img) {
+							img = $(".mw-content-ltr.mw-content-text table tbody tr:nth-child(" +i+ ") td:nth-child(1) div a img").attr("src")
+						}
 						img = img.split("/scale-to-width-down/")[0]
 						img = img + "/scale-to-width-down/120"
 						console.log(img)

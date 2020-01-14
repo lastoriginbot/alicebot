@@ -93,7 +93,7 @@ exports.name = {
   "e16 talon feather" : "e-16 talonfeather",
   "e-16 talon feather" : "e-16 talonfeather",
   "talon feather" : "e-16 talonfeather",
-  "talon" : "e-16 talonfether",
+  "talon" : "e-16 talonfeather",
   "destruction may" : "may the doombringer",
   "may" : "may the doombringer",
   "b11" : "b-11 night angel",

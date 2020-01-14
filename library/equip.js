@@ -23,7 +23,7 @@ exports.name = {
 	"force field" : "Energy Shield",
 	"shield" : "Energy Shield",
 	"barrier" : "Energy Shield",
-	"ebg" : "Enhanced Observation Gear",
+	"eog" : "Enhanced Observation Gear",
 	"box scope" : "Enhanced Observation Gear",
 	"fire can" : "Fire Spray",
 	"frost can" : "Frost Spray",

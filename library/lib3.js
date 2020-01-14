@@ -64,7 +64,7 @@ exports.name = {
 	"ag-2c siren" : "Sirene",
 	"p-49 sleipnir (aka penguin)" : "Sleipnir",
 	"p/a-00 griffon" : "Griffon",
-	"harpyia" : "Harpyia",
+	"p-22 harpyia" : "Harpyia",
 	"p/a-8 blackhound" : "Blackhound",
 	"p-29 lindwurm" : "Lindwurm",
 	"coco & whiteshell" : "Coco",

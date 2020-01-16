@@ -33,6 +33,7 @@ class Skill extends commando.Command {
 				for (var i = 0; i < siz -1; i++){
 					let name = $("html body div:nth-child(2) div:nth-child(2) div table tbody tr:nth-child(" + (6*i + 1) + ") td:nth-child(3)").html()
 					name = te(name)
+					if (name) {
 					if (name.toLowerCase() == unit.toLowerCase()) {
 						check = true;
 						let pages = [];
@@ -77,6 +78,7 @@ class Skill extends commando.Command {
 						}
 						sende(message, pages)
 						break;
+					}
 					}
 				}
 				if (check == false) { 

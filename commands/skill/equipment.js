@@ -50,7 +50,7 @@ class Equip extends commando.Command {
 						let img = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td a").attr('href')
 						let eff = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(3)").html()
 						eff= te(eff)
-						let note = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(4)").html()
+						let note = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(4)").text()
 						note= te(note)
 						let embed = new Discord.RichEmbed()
 						embed.setTitle(name)

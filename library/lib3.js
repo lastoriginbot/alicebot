@@ -97,7 +97,7 @@ exports.name = {
 	"circe" : "Circe",
 	"barbariana" : "Babariana",
 	"veronica" : "Veronica",
-	"keumran s7" : "Ran",
+	"keumran s7" : "KeumRan",
 	"tiamat" : "Tiamat",
 	"lancer mina" : "Mina",
 	"empress" : "Empress",

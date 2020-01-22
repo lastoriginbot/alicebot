@@ -5,8 +5,7 @@ var cheerio = require('cheerio');
 var he = require('he');
 require('@gouch/to-title-case')
 var urlencode = require('urlencode');
-var name = require('../../library/lib.js').name;
-var name2 = require('../../library/lib3.js').name;
+var name = require('../../library/name.js').name;
 class Image extends commando.Command {
     constructor(client) {
         super(client, {

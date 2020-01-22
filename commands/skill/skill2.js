@@ -38,12 +38,15 @@ class Skill extends commando.Command {
                     			let siz = $2('.wikitable.skilltable tbody').find('tr').length
                     			let img = $2('.wikitable.skilltable tbody tr td table tbody tr td div a img').attr('data-src')
                     			if (!img) {img = $2('.wikitable.skilltable tbody tr td table tbody tr td div a img').attr('src')}
+					let state = te($2('.wikitable.skilltable tbody tr:nth-child(1) td').html().trim())
+					if (state == "Name") {state = null}
 					pages = []
                     			for (var i = 1; i < siz; i++){
 						let siz2 = $2('.wikitable.skilltable tbody tr:nth-child(' + i + ')').find('td').length
 						if (siz2 == 6) {
 							let na = te($2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td:nth-child(2)').html().trim())
 							if (na != "Name") {
+								if (state) {na = state + "\n" + na}
 								let des = te($2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td:nth-child(3)').html().trim())
 								let siz3 = $2('.wikitable.skilltable tbody tr:nth-child(' + (i + 1) + ')').find('td').length
 								let aoe
@@ -54,7 +57,6 @@ class Skill extends commando.Command {
 								else {
 									aoe = $2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td div div a img').attr('data-src')
 									if (!aoe) {aoe = $2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td div div a img').attr('src')}
-									if (!aoe) {aoe = "Self"}
 								}
 								let range = te($2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td:nth-child(5)').html().trim())
 								pages = adde(img, na, des, range, aoe, pages)
@@ -63,6 +65,7 @@ class Skill extends commando.Command {
 						else if (siz2 == 4) {
 							let na = te($2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td:nth-child(1)').html().trim())
 							if (na != "Name") {
+								if (state) {na = state + "\n" + na}
 								let des = te($2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td:nth-child(2)').html().trim())
 								let siz3 = $2('.wikitable.skilltable tbody tr:nth-child(' + (i + 1) + ')').find('td').length
 								let aoe
@@ -73,7 +76,6 @@ class Skill extends commando.Command {
 								else {
 									aoe = $2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td div div a img').attr('data-src')
 									if (!aoe) {aoe = $2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td div div a img').attr('src')}
-									if (!aoe) {aoe = "Self"}
 								}
 								let range = te($2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td:nth-child(4)').html().trim())
 								pages = adde(img, na, des, range, aoe, pages)

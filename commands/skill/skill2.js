@@ -13,7 +13,7 @@ class Skill extends commando.Command {
             	name: 'skill',
             	group: 'find',
 		aliases: ['s', 'skills'],
-            	memberName: 'skill2',
+            	memberName: 'skill',
             	description: 'list all actives/passives of a unit',
 		args: [{
 		    key: 'text',

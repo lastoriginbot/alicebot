@@ -24,6 +24,7 @@ class Skill extends commando.Command {
 	async run(message, { text }) {
 		var unit = text.toLowerCase();
 		unit = nameChange(unit);
+		console.log(unit)
 		var check = false;
 		var link = "https://lastorigin.fandom.com/wiki/" + urlencode(unit);
         	request(link, function (err, resp, html) {

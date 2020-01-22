@@ -53,7 +53,7 @@ class Image extends commando.Command {
 }
 function nameChange(unit) {
 	if (name[unit]) {unit = name[unit];}
-	if (name2[unit]) {unit = name2[unit];}
+	unit = unit.toTitleCase()
 	return unit
 }
 function te(output) {

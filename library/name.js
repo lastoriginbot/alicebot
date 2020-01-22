@@ -325,7 +325,7 @@ exports.name = {
   "arman" : "Arman",
   "carol" : "Carolina",
   "carolina" : "Carolina",
-  "carol carolina" : "Carolina"
+  "carol carolina" : "Carolina",
   "yumi" : "Yumi",
   "connector yumi" : "Yumi",
   "elven" : "Elven Forest Maker",

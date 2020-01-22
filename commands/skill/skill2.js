@@ -40,6 +40,7 @@ class Skill extends commando.Command {
                     			if (!img) {img = $2('.wikitable.skilltable tbody tr td table tbody tr td div a img').attr('src')}
 					let state = te($2('.wikitable.skilltable tbody tr:nth-child(1) td').html().trim())
 					if (state == "Name") {state = null}
+					if (state == "Unit") {state = null}
 					pages = []
                     			for (var i = 1; i < siz; i++){
 						let siz2 = $2('.wikitable.skilltable tbody tr:nth-child(' + i + ')').find('td').length

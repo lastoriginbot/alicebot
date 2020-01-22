@@ -90,7 +90,7 @@ exports.name = {
   "t-9" : "Gremlin",
   "t9 gremlin" : "Gremlin",
   "gremlin" : "Gremlin",
-  "t-9 gremlin" : "Gremlin"
+  "t-9 gremlin" : "Gremlin",
   "gs10" : "Sand Girl",
   "gs-10" : "Sand Girl",
   "gs10 sandgirl" : "Sand Girl",
@@ -111,7 +111,7 @@ exports.name = {
   "khan" : "Khan",
   "swift khan" : "Khan",
   "camel" : "Quick Camel",
-  "quick camel" : "Quick Camel"
+  "quick camel" : "Quick Camel",
   "t75" : "War Wolf",
   "t-75" : "War Wolf",
   "t75 werewolf" : "War Wolf",
@@ -199,7 +199,7 @@ exports.name = {
   "ao2 raven" : "Raven",
   "raven" : "Raven",
   "ao-2 raven" : "Raven",
-  "neodym" : "neodym",
+  "neodym" : "Neodym",
   "al" : "Phantom",
   "phantom" : "Phantom",
   "al phantom" : "Phantom",

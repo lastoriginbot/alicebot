@@ -32,7 +32,7 @@ exports.name = {
   "marie" : "Marie",
   "m-5" : "Efreeti",
   "efreeti" : "Efreeti",
-  "m-5 efreeti" : "Efreeti"
+  "m-5 efreeti" : "Efreeti",
   "t3" : "Leprechaun",
   "t-3" : "Leprechaun",
   "t3 leprechaun" : "Leprechaun",

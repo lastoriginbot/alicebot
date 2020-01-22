@@ -9,9 +9,9 @@ exports.name = {
   "serapias alice" : "Alice",
   "vanilla" : "Vanilla",
   "a1" : "Vanilla",
-  "vanilla a1" : "Vanilla"
+  "vanilla a1" : "Vanilla",
   "rhea" : "Rhea",
-  "oberonia rhea" : "Rhea"
+  "oberonia rhea" : "Rhea",
   "lise" : "Scissors Lise",
   "daphne" : "Daphne",
   "aqua" : "Aqua",
@@ -37,7 +37,7 @@ exports.name = {
   "t-3" : "Leprechaun",
   "t3 leprechaun" : "Leprechaun",
   "leprechaun" : "Leprechaun",
-  "t-3 leprechaun" : "Leprechaun"
+  "t-3 leprechaun" : "Leprechaun",
   "aa-7" : "Impet",
   "aa-7 impet" : "Impet",
   "aa7" : "Impet",

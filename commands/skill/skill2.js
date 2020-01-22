@@ -77,10 +77,9 @@ class Skill extends commando.Command {
 								pages = adde(img, na, des, range, aoe, pages)
 							}
 						}
-					
                     			}
+					sende(message, pages)
                 		})
-				sende(message, pages)
             		}
         	})
 		if (!check) {message.channel.send("Wrong Name")}

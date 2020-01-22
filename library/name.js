@@ -1,6 +1,6 @@
 exports.name = {
   "prototype labiata" : "Labiata",
-  "labi" : "Labiata"
+  "labi" : "Labiata",
   "labiata" : "Labiata",
   "constantia" : "Constantia",
   "s2" : "Constantia",

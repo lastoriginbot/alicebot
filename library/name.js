@@ -347,7 +347,7 @@ exports.name = {
   "s7" : "KeumRan",
   "keumran" : "KeumRan",
   "keumran s7" : "KeumRan",
-  "ran" : "KeumRan"
+  "ran" : "KeumRan",
   "x00" : "Tiamat",
   "x-00" : "Tiamat",
   "x00 tiamat" : "Tiamat",

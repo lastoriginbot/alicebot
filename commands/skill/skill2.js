@@ -26,18 +26,18 @@ class Skill extends commando.Command {
 		unit = nameChange(unit);
 		var check = false;
 		var link = "https://lastorigin.fandom.com/wiki/" + urlencode(unit);
-        request(link, function (err, resp, html) {
+        	request(link, function (err, resp, html) {
 			if (!err) {
-                var pages = []
-                const $ = cheerio.load(html);
-                $('.wikitable.skilltable').each(function(i, elem) {
+                		var pages = []
+                		const $ = cheerio.load(html);
+                		$('.wikitable.skilltable').each(function(i, elem) {
 					check = true
-                    let $2 = cheerio.load(elem);
-                    let siz = $2('.wikitable.skilltable tbody').find('tr').length
-                    let img = $2('.wikitable.skilltable tbody tr td table tbody tr td div a img').attr('data-src')
-                    if (!img) {img = $2('.wikitable.skilltable tbody tr td table tbody tr td div a img').attr('src')}
+                    			let $2 = cheerio.load(elem);
+                    			let siz = $2('.wikitable.skilltable tbody').find('tr').length
+                    			let img = $2('.wikitable.skilltable tbody tr td table tbody tr td div a img').attr('data-src')
+                    			if (!img) {img = $2('.wikitable.skilltable tbody tr td table tbody tr td div a img').attr('src')}
 					pages = []
-                    for (var i = 1; i < siz; i++){
+                    			for (var i = 1; i < siz; i++){
 						let siz2 = $2('.wikitable.skilltable tbody tr:nth-child(' + i + ')').find('td').length
 						if (siz2 == 6) {
 							let na = te($2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td:nth-child(2)').html().trim())
@@ -77,12 +77,13 @@ class Skill extends commando.Command {
 								pages = adde(img, na, des, range, aoe, pages)
 							}
 						}
-					sende(message, pages)
-                    }
-                })
-				if (!check) {message.channel.send("Wrong Name")}
-            }
-        })
+					
+                    			}
+                		})
+				sende(message, pages)
+            		}
+        	})
+		if (!check) {message.channel.send("Wrong Name")}
 	}
 }
 function nameChange(unit) {

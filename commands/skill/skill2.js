@@ -87,7 +87,8 @@ class Skill extends commando.Command {
 	}
 }
 function nameChange(unit) {
-  if (name[unit]) unit = name[unit];
+	if (name[unit]) {unit = name[unit];}
+	if (name2[unit]) {unit = name2[unit];}
 	return unit
 }
 function te(output) {

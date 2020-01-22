@@ -52,10 +52,10 @@ class Skill extends commando.Command {
 								else {
 									aoe = $2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td div div a img').attr('data-src')
 									if (!aoe) {aoe = $2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td div div a img').attr('src')}
-								if (!aoe) {aoe = "Self"}
-							}
-							let range = te($2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td:nth-child(5)').html().trim())
-							pages = adde(img, na, des, range, aoe, pages)
+									if (!aoe) {aoe = "Self"}
+								}
+								let range = te($2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td:nth-child(5)').html().trim())
+								pages = adde(img, na, des, range, aoe, pages)
 							}
 						}
 						else if (siz2 == 4) {
@@ -80,9 +80,9 @@ class Skill extends commando.Command {
                     			}
 					sende(message, pages)
                 		})
+				if (!check) {message.channel.send("Wrong Name")}
             		}
         	})
-		if (!check) {message.channel.send("Wrong Name")}
 	}
 }
 function nameChange(unit) {

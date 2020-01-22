@@ -4,7 +4,7 @@ exports.name = {
   "labiata" : "Labiata",
   "constantia" : "Constantia",
   "s2" : "Constantia",
-  "constantia s2" : "Constantia"
+  "constantia s2" : "Constantia",
   "alice" : "Alice", 
   "serapias alice" : "Alice",
   "vanilla" : "Vanilla",

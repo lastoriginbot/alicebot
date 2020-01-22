@@ -10,9 +10,9 @@ var name2 = require('../../library/lib3.js').name;
 class Skill extends commando.Command {
     constructor(client) {
         super(client, {
-            	name: 'skill2',
+            	name: 'skill',
             	group: 'find',
-		aliases: ['s2', 'skills2'],
+		aliases: ['s', 'skills'],
             	memberName: 'skill2',
             	description: 'list all actives/passives of a unit',
 		args: [{

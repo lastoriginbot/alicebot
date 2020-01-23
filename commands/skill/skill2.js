@@ -47,7 +47,7 @@ class Skill extends commando.Command {
 							let na = te($2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td:nth-child(2)').html().trim())
 							if (na != "Name") {
 								if (state) {na = state + "\n" + na}
-								let des = te($2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td:nth-child(3)').text().trim())
+								let des = te($2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td:nth-child(3)').html().trim())
 								let siz3 = $2('.wikitable.skilltable tbody tr:nth-child(' + (i + 1) + ')').find('td').length
 								let aoe
 								if (siz3 == 1) {
@@ -66,7 +66,7 @@ class Skill extends commando.Command {
 							let na = te($2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td:nth-child(1)').html().trim())
 							if (na != "Name") {
 								if (state) {na = state + "\n" + na}
-								let des = te($2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td:nth-child(2)').text().trim())
+								let des = te($2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td:nth-child(2)').html().trim())
 								let siz3 = $2('.wikitable.skilltable tbody tr:nth-child(' + (i + 1) + ')').find('td').length
 								let aoe
 								if (siz3 == 1) {

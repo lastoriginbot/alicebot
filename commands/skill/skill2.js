@@ -59,7 +59,7 @@ class Skill extends commando.Command {
 									if (!aoe) {aoe = $2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td div div a img').attr('src')}
 								}
 								let range = te($2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td:nth-child(5)').html().trim())
-								pages = adde(img, na, des, range, aoe, pages)
+								pages = adde(img, na, des, range, aoe, pages, link)
 							}
 						}
 						else if (siz2 == 4) {
@@ -78,7 +78,7 @@ class Skill extends commando.Command {
 									if (!aoe) {aoe = $2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td div div a img').attr('src')}
 								}
 								let range = te($2('.wikitable.skilltable tbody tr:nth-child(' + i + ') td:nth-child(4)').html().trim())
-								pages = adde(img, na, des, range, aoe, pages)
+								pages = adde(img, na, des, range, aoe, pages, link)
 							}
 						}
                     			}
@@ -106,10 +106,11 @@ function te(output) {
   });
   return filtered.join("\n");
 }
-function adde(img, name, skill, range, aoe, pages) {
+function adde(img, name, skill, range, aoe, pages, link) {
 	let embed = new Discord.RichEmbed()
 	embed.setThumbnail(img)
 	embed.setTitle(name)
+	embed.setURL(link)
 	embed.setDescription(skill)
 	if (range) {
 		embed.addField("Range/Cost", range);

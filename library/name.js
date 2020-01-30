@@ -155,6 +155,8 @@ exports.name = {
   "p18 sylphid" : "Sylphid",
   "sylphid" : "Sylphid",
   "p-18 sylphid" : "Sylphid",
+  "royal arsenal" : "Royal Arsenal",
+  "arsenal" : "Royal Arsenal",
   "a1" : "Bloody Panther",
   "a-1" : "Bloody Panther",
   "a1 bloody panther" : "Bloody Panther",

@@ -13,7 +13,7 @@ exports.name = {
   "rhea" : "Rhea",
   "oberonia rhea" : "Rhea",
   "lise" : "Scissors Lise",
-  'sl' : 'Scissors Lise'.
+  "sl" : "Scissors Lise",
   "daphne" : "Daphne",
   "aqua" : "Aqua",
   "alex" : "Alexandra",

@@ -61,11 +61,11 @@ function sendembed(units, message, score) {
 				var links = []
 				$(".image.lightbox").each(function(i, elem){
 			  		let img2 = $(elem).find("img").attr("data-src");
-            links.push(img2)
-            })
+            				links.push(img2)
+            			})
 				var ind = random.int(0, links.length - 1)
 				img = links[ind]
-				img = img.split("latest").join("latest/scale-to-height-down/500")
+				img = img.split("latest")[0] + "latest/scale-to-height-down/500"
 				console.log(img)
 				const filter = response => {
 					let nam = nameChange(response.content.toLowerCase())

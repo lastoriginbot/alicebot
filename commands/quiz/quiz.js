@@ -21,7 +21,7 @@ class RanRoll extends commando.Command {
     }
 
     async run(message, input) {
-	    if (1) {message.channel.send("In quiz channel only")}
+	    if (0) {message.channel.send("In quiz channel only")}
 	    else {
 		    var link = "https://lastorigin.fandom.com/wiki/Unit_List"
 

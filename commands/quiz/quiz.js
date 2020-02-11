@@ -61,7 +61,7 @@ function sendembed(units, message, score) {
 				var links = []
 				console.log(link)
 				for (var i = 1; i<10; i++){
-					let img2 = $("#gallery-0 div:nth-child(" + i +") div div a img")..attr("data-src");
+					let img2 = $("#gallery-0 div:nth-child(" + i +") div div a img").attr("data-src");
             				if (img2) {
 						links.push(img2)
 						console.log(img2)

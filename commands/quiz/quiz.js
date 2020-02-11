@@ -61,7 +61,10 @@ function sendembed(units, message, score) {
 				var links = []
 				for (var i = 1; i<10; i++){
 					let img2 = $(".image.lightbox:nth-child(" + i +") img").attr("data-src");
-            				if (img2) {links.push(img2)}
+            				if (img2) {
+						links.push(img2)
+						console.log(img2)
+					}
 				}
 				var ind = random.int(0, links.length - 1)
 				img = links[ind]

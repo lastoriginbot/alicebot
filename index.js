@@ -9,6 +9,8 @@ bot.on('ready', () => {
     bot.user.setActivity('Only &skill, for now');
 });
 bot.registry.registerGroup('find', 'Find');
+bot.registry.registerGroup('quiz', 'Quiz');
+bot.registry.registerGroup('role', 'Role');
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands");
 bot.login(process.env.BOT_TOKEN);

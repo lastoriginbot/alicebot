@@ -59,6 +59,10 @@ function sendembed(units, message, score) {
 				const $ = cheerio.load(html);
 				var img
 				var links = []
+				for (int i = 1; i<10; i++){
+					let img2 = $(".image.lightbox img:nth-child(" + i +")").attr("data-src");
+            				if (img2) {console.log(img2)}
+				}
 				$(".image.lightbox").each(function(i, elem){
 			  		let img2 = $(elem).find("img").attr("data-src");
             				links.push(img2)

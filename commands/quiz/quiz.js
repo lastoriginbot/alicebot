@@ -60,7 +60,7 @@ function sendembed(units, message, score) {
 				var img
 				var links = []
 				for (var i = 1; i<10; i++){
-					let img2 = $(".image.lightbox:nth-child(" + i +") img").attr("data-src");
+					let img2 = $(".wikia-gallery.wikia-gallery-caption-below.wikia-gallery-position-left.wikia-gallery-spacing-medium.wikia-gallery-border-small.wikia-gallery-captions-left.wikia-gallery-caption-size-medium.inited div:nth-child(" + i +") div div a img").attr("data-src");
             				if (img2) {
 						links.push(img2)
 						console.log(img2)

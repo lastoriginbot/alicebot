@@ -16,6 +16,7 @@
     "request": "^2.88.0",
     "he": "^1.2.0",
     "@gouch/to-title-case": "^2.2.1",
-    "urlencode": "^1.1.0"
+    "urlencode": "^1.1.0",
+    "canvas" : "^2.6.0"
   }
 }

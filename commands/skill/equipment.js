@@ -47,17 +47,19 @@ class Equip extends commando.Command {
 					name = te(name)
 					if (name.toLowerCase() == gear) {
 						check = true
-						let img = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td a").attr('href')
+						let img = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td a img").attr('href')
 						let eff = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(3)").html()
 						eff= te(eff)
 						let note = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(4)").text()
 						note= te(note)
+						let exp = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(5)").text()
+						exp= te(exp)
 						let embed = new Discord.RichEmbed()
 						embed.setTitle(name)
 						embed.setThumbnail(img)
 						embed.setURL(link)
 						embed.addField("Effect", eff)
-						embed.addField("Note", note)
+						if (note) {embed.addField("Note", note)}
 						embed.setFooter("Effects within square brackets are applied as combat buffs/debuffs.")
 						message.channel.send(embed)
 						break

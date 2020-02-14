@@ -48,7 +48,7 @@ class Equip extends commando.Command {
 					if (name) {
 						if (name.toLowerCase() == gear) {
 							check = true
-							let img = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td a img").attr('src')
+							let img = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td a img").attr('data-src')
 							let eff = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(3)").html()
 							eff= te(eff)
 							let note = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(4)").text()

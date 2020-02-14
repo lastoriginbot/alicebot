@@ -62,6 +62,7 @@ class Equip extends commando.Command {
 							embed.setURL(link)
 							embed.addField("Effect", eff)
 							if (note) {embed.addField("Note", note)}
+							if (exp) {embed.addField("EXP to Max", exp)}
 							embed.setFooter("Effects within square brackets are applied as combat buffs/debuffs.")
 							message.channel.send(embed)
 							break

@@ -109,5 +109,6 @@ exports.name = {
 	"crit/acc chip" : "Enhanced Output Chip",
 	"acc / crit chip" : "Enhanced Output Chip",
 	"crit / acc chip" : "Enhanced Output Chip",
-	"sylphid" : "ATFLIR Reinforcement Chip"
+	"sylphid" : "ATFLIR Reinforcement Chip",
+	"chocolate" : "Grand Gru Chocoloate"
 }

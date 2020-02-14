@@ -45,25 +45,27 @@ class Equip extends commando.Command {
 				for (var i = 2; i<=siz; i++) {
 					let name = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(2)").html()
 					name = te(name)
-					if (name.toLowerCase() == gear) {
-						check = true
-						let img = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td a img").attr('src')
-						let eff = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(3)").html()
-						eff= te(eff)
-						let note = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(4)").text()
-						note= te(note)
-						let exp = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(5)").text()
-						exp= te(exp)
-						let embed = new Discord.RichEmbed()
-						console.log(img)
-						embed.setTitle(name)
-						embed.setThumbnail(img)
-						embed.setURL(link)
-						embed.addField("Effect", eff)
-						if (note) {embed.addField("Note", note)}
-						embed.setFooter("Effects within square brackets are applied as combat buffs/debuffs.")
-						message.channel.send(embed)
-						break
+					if (name) {
+						if (name.toLowerCase() == gear) {
+							check = true
+							let img = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td a img").attr('src')
+							let eff = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(3)").html()
+							eff= te(eff)
+							let note = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(4)").text()
+							note= te(note)
+							let exp = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(5)").text()
+							exp= te(exp)
+							let embed = new Discord.RichEmbed()
+							console.log(img)
+							embed.setTitle(name)
+							embed.setThumbnail(img)
+							embed.setURL(link)
+							embed.addField("Effect", eff)
+							if (note) {embed.addField("Note", note)}
+							embed.setFooter("Effects within square brackets are applied as combat buffs/debuffs.")
+							message.channel.send(embed)
+							break
+						}
 					}
 				}
 				if (!check) {message.channel.send("Wrong name")}

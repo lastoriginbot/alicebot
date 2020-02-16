@@ -66,6 +66,11 @@ function sendembed(units, message, score) {
 						links.push(img2)
 						console.log(img2)
 					}
+					else {
+						img2 = $("#gallery-0 div:nth-child(" + i +") div div a img").attr("data-src");
+						links.push(img2)
+						console.log(img2)
+					}
 				}
 				var ind = random.int(0, links.length - 1)
 				img = links[ind]

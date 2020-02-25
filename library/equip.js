@@ -105,10 +105,10 @@ exports.name = {
 	"resist chip" : "Vaccine Chip",
 	"res chip" : "Vaccine Chip",
 	"resistance chip" : "Vaccine Chip",
-	"acc/crit chip" : "Enhanced Output Chip",
-	"crit/acc chip" : "Enhanced Output Chip",
-	"acc / crit chip" : "Enhanced Output Chip",
-	"crit / acc chip" : "Enhanced Output Chip",
+	"acc/crit chip" : "Enhanced Analysis Chip",
+	"crit/acc chip" : "Enhanced Analysis Chip",
+	"acc / crit chip" : "Enhanced Analysis Chip",
+	"crit / acc chip" : "Enhanced Analysis Chip",
 	"sylphid" : "ATFLIR Reinforcement Chip",
 	"chocolate" : "Grand Cru Chocolate"
 }

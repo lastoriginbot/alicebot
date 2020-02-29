@@ -222,6 +222,8 @@ exports.name = {
   "amy" : "Amy",
   "tomo" : "Tomo",
   "tomoe" : "Tomo",
+  "hongryeon" : "HongRyeon",
+  "red lotus" : "HongRyeon",
   "as12" : "Steel Draco",
   "as-12" : "Steel Draco",
   "as12 steel draco" : "Steel Draco",

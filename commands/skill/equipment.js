@@ -60,7 +60,8 @@ class Equip extends commando.Command {
 							console.log(img)
 							embed.setTitle(name)
 							embed.setThumbnail(img)
-							embed.setURL("https://lastorigin.fandom.com/wiki/" + name)
+							let link2 ="https://lastorigin.fandom.com/wiki/" + name
+							embed.setURL(link2)
 							embed.addField("Effect", eff)
 							if (note) {embed.addField("Note", note)}
 							if (exp) {embed.addField("EXP to Max", exp)}

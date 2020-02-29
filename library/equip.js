@@ -41,6 +41,7 @@ exports.name = {
 	"limit breaker" : "Output Limit Release Device",
 	"limit remover" : "Output Limit Release Device",
 	"shock can" : "Shock Spray",
+	"recycle" : "Recycling Module",
 	"bomber" : "Tactical Bombing Equipment",
 	"missile pack" : "Tactical Bombing Equipment",
 	"scouter" : "Telephoto Sight",
@@ -110,5 +111,7 @@ exports.name = {
 	"acc / crit chip" : "Enhanced Analysis Chip",
 	"crit / acc chip" : "Enhanced Analysis Chip",
 	"sylphid" : "ATFLIR Reinforcement Chip",
-	"chocolate" : "Grand Cru Chocolate"
+	"chocolate" : "Grand Cru Chocolate",
+	"generator" : "High Power Generator",
+	"ecos" : "Enhanced Combat OS"
 }

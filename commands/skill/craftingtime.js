@@ -23,7 +23,7 @@ class Time extends commando.Command {
     }
 	async run(message, { text }) {
 		var time = text.toLowerCase();
-		var link = "https://lastorigin.fandom.com/wiki/Workshop"
+		var link = "https://lastorigin.fandom.com/wiki/Crafting_Timetable"
 		console.log(link)
 		request(link, function(err, resp, html) {
 			if (!err) {

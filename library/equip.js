@@ -113,5 +113,8 @@ exports.name = {
 	"sylphid" : "ATFLIR Reinforcement Chip",
 	"chocolate" : "Grand Cru Chocolate",
 	"generator" : "High Power Generator",
-	"ecos" : "Enhanced Combat OS"
+	"ecos" : "Enhanced Combat OS",
+	"exoskeleton" : "Auxiliary Exoskeleton",
+	"booster" : "Auxiliary Booster",
+	"aux exoskeleton" : "Auxiliary Exoskeleton"
 }

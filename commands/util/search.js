@@ -29,7 +29,7 @@ class Search extends commando.Command {
                     if (tex != null && li != null) {
                         out = out + tex + ": " + li + "\n"
                     }
-                    if (vid == "Videos for '" + text + "'") {
+                    if (vid == "Videos for '" + input + "'") {
                         max++;
                     }
                 }

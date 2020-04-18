@@ -1,8 +1,8 @@
 const commando = require('discord.js-commando');
 const Discord = require('discord.js');
-var moment = require('moment');
-var printf = require('printf');
-var name = require('../../library/orb.js').name;
+var request = require('request');
+var cheerio = require('cheerio');
+var urlencode = require('urlencode');
 
 class Search extends commando.Command {
     constructor(client) {

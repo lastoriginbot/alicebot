@@ -11,6 +11,7 @@ bot.on('ready', () => {
 bot.registry.registerGroup('find', 'Find');
 bot.registry.registerGroup('quiz', 'Quiz');
 bot.registry.registerGroup('role', 'Role');
+bot.registry.registerGroup('until2', 'Util');
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands");
 bot.login(process.env.BOT_TOKEN);

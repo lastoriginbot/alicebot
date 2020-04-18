@@ -10,7 +10,7 @@ class Search extends commando.Command {
             name: 'search',
             group: 'util2',
             memberName: 'search',
-            description: 'wiki search,
+            description: 'wiki search',
             examples: ['&search alice'],
         });
     }

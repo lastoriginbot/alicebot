@@ -116,5 +116,6 @@ exports.name = {
 	"ecos" : "Enhanced Combat OS",
 	"exoskeleton" : "Auxiliary Exoskeleton",
 	"booster" : "Auxiliary Booster",
-	"aux exoskeleton" : "Auxiliary Exoskeleton"
+	"aux exoskeleton" : "Auxiliary Exoskeleton",
+	"amplifier" : "O.D Amplifier"
 }

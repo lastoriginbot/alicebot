@@ -60,20 +60,13 @@ function sendembed(units, message, score) {
 				var img
 				var links = []
 				console.log(link)
-				for (var i = 1; i<10; i++){
-					let img2 = $("#gallery-0 div:nth-child(" + i +") div div a img").attr("data-src");
-            				if (img2) {
-						links.push(img2)
-						console.log(img2)
+				$(".skin").each(function(i, elem){
+			  		let img = $(elem).find("img").attr("data-src");
+					if (img){
+						img = img.split("/scale-to-width-down/")[0]
+						links.push(img)
 					}
-					else {
-						img2 = $("#gallery-0 div:nth-child(" + i +") div div a img").attr("src");
-						if (img2) {
-							links.push(img2)
-							console.log(img2)
-						}
-					}
-				}
+				})
 				var ind = random.int(0, links.length - 1)
 				img = links[ind]
 				img = img.split("latest")[0] + "latest/scale-to-height-down/500"

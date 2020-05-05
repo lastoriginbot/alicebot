@@ -372,7 +372,7 @@ exports.name = {
   "x-00 tiamat" : "Tiamat",
   "tiamat" : "Tiamat",
   "mina" : "Mina",
-  "lancer mina" : "mina",
+  "lancer mina" : "Mina",
   "empress" : "Empress",
   "faucre" : "Faucre",
   "shade" : "Shade",
@@ -435,5 +435,10 @@ exports.name = {
   "ct-103" : "Fortress",
   "ct103 fortress" : "Fortress",
   "fortress" : "Fortress",
-  "ct-103 fortress" : "Fortress"
+  "ct-103 fortress" : "Fortress",
+  "mh-4" : "Thetis",
+  "mh-4 thetis" : "Thetis",
+  "tethys" : "Thetis",
+  "mh-4 tethys" : "Thetis",
+  "thetis" : "Thetis"
 }

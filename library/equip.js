@@ -117,5 +117,9 @@ exports.name = {
 	"exoskeleton" : "Auxiliary Exoskeleton",
 	"booster" : "Auxiliary Booster",
 	"aux exoskeleton" : "Auxiliary Exoskeleton",
-	"amplifier" : "O.D Amplifier"
+	"amplifier" : "O.D Amplifier",
+	"cerberus" : "Chop Maker II",
+	"lise" : "Pest Shredder",
+	"gigantes" : "Advanced Compound Armor",
+	"leona" : "Combat Observation Frame"
 }

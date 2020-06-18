@@ -32,6 +32,11 @@ class Equip extends commando.Command {
 		if (li2 == "chip") {
 			link = "https://lastorigin.fandom.com/wiki/Sub:Equipment/Chips"
 		}
+		else if (li2 == "beta") {
+			if (li[li.length-2] == "chip") {
+				link = "https://lastorigin.fandom.com/wiki/Sub:Equipment/Chips"
+			}
+		}
 		else if (li2 == "os") {
 			link = "https://lastorigin.fandom.com/wiki/Sub:Equipment/OS"
 		}

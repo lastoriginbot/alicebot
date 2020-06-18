@@ -34,7 +34,8 @@ class Equip extends commando.Command {
 		}
 		else if (li2 == "beta") {
 			if (li[li.length-2] == "chip") {
-				var gear = nameChange(li.slice(0,li.length-1).join(" ")) + "beta"
+				gear = nameChange(li.slice(0,li.length-1).join(" ")) + " beta"
+				console.log(gear)
 				link = "https://lastorigin.fandom.com/wiki/Sub:Equipment/Chips"
 			}
 		}

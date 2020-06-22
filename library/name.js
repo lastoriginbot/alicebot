@@ -443,5 +443,9 @@ exports.name = {
   "thetis" : "Thetis",
   "id" : "Invincible Dragon",
   "invincible" : "Invincible Dragon",
-  "dragon" : "Invincible Dragon"
+  "dragon" : "Invincible Dragon",
+  "bw" : "Black Wyrm",
+  "wyrm" : "Black Wyrm",
+  "kunoichi" : "Kunoichi Zero",
+  "zero" : "Kunoichi Zero"
 }

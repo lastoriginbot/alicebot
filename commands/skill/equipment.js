@@ -65,6 +65,7 @@ class Equip extends commando.Command {
 							let exp = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(5)").text()
 							exp= te(exp)
 							let embed = new Discord.RichEmbed()
+							img = img.split("/scale-to-width-down/")[0]
 							console.log(img)
 							embed.setTitle(name)
 							embed.setThumbnail(img)

@@ -447,5 +447,12 @@ exports.name = {
   "bw" : "Black Wyrm",
   "wyrm" : "Black Wyrm",
   "kunoichi" : "Kunoichi Zero",
-  "zero" : "Kunoichi Zero"
+  "zero" : "Kunoichi Zero",
+  "rhein" : "Rhein Ritter",
+  "rhine" : "Rhein Ritter",
+  "rhine ritter" : "Rhein Ritter",
+  "ritter" : "Rhein Ritter",
+  "rr" : "Rhein Ritter",
+  "snow" : "Snow Feather",
+  "sf" : "Snow Feather" 
 }

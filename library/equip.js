@@ -121,5 +121,6 @@ exports.name = {
 	"cerberus" : "Chop Maker II",
 	"lise" : "Pest Shredder",
 	"gigantes" : "Advanced Compound Armor",
-	"leona" : "Combat Observation Frame"
+	"leona" : "Combat Observation Frame",
+	"veronica" : "Special Combatant's Spike Necklace"
 }

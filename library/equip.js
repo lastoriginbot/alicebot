@@ -122,5 +122,8 @@ exports.name = {
 	"lise" : "Pest Shredder",
 	"gigantes" : "Advanced Compound Armor",
 	"leona" : "Combat Observation Frame",
-	"veronica" : "Special Combatant's Spike Necklace"
+	"veronica" : "Special Combatant's Spike Necklace",
+	"seljuq" : "F.C.S",
+	"elven forest maker" : "Special Frame for Rough Terrain",
+	"dark elven forest ranger" : "Ranger's Combat Equipment Set"
 }

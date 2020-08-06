@@ -5,7 +5,7 @@ var cheerio = require('cheerio');
 var he = require('he');
 require('@gouch/to-title-case')
 var urlencode = require('urlencode');
-var name = require('../../library/lib.js').name;
+var name3 = require('../../library/name.js').name3;
 var name2 = require('../../library/equip.js').name;
 class Equip extends commando.Command {
     constructor(client) {
@@ -87,8 +87,11 @@ class Equip extends commando.Command {
 	}
 }
 function nameChange(unit) {
-	if (name2[unit]) {unit = name2[unit];}
-	return unit
+	let unit2 = unit.toLowerCase()
+	if (name3[unit2]) {unit2 = name3[unit2];}
+	unit2 = unit.toLowerCase()
+	if (name2[unit2]) {unit2 = name2[unit2];}
+	return unit2
 }
 function te(output) {
 	if (output == null) {return null}

@@ -5,7 +5,7 @@ var cheerio = require('cheerio');
 var he = require('he');
 require('@gouch/to-title-case')
 var urlencode = require('urlencode');
-var name3 = require('../../library/name.js').name3;
+var name3 = require('../../library/name.js').name;
 var name2 = require('../../library/equip.js').name;
 class Equip extends commando.Command {
     constructor(client) {

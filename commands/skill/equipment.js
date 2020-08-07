@@ -89,7 +89,7 @@ class Equip extends commando.Command {
 function nameChange(unit) {
 	let unit2 = unit.toLowerCase()
 	if (name3[unit2]) {unit2 = name3[unit2];}
-	unit2 = unit.toLowerCase()
+	unit2 = unit2.toLowerCase()
 	if (name2[unit2]) {unit2 = name2[unit2];}
 	return unit2
 }

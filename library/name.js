@@ -454,5 +454,7 @@ exports.name = {
   "ritter" : "Rhein Ritter",
   "rr" : "Rhein Ritter",
   "snow" : "Snow Feather",
-  "sf" : "Snow Feather" 
+  "sf" : "Snow Feather" ,
+  "mr.alfred" : "Mr.Alfred",
+  "mr alfred" : "Mr.Alfred"
 }

@@ -125,5 +125,7 @@ exports.name = {
 	"veronica" : "Special Combatant's Spike Necklace",
 	"seljuq" : "F.C.S",
 	"elven forest maker" : "Special Frame for Rough Terrain",
-	"dark elven forest ranger" : "Ranger's Combat Equipment Set"
+	"dark elven forest ranger" : "Ranger's Combat Equipment Set",
+	"enhanced scope" = "Enhanced Ultra-Precise Scope",
+	"eups" = "Enhanced Ultra-Precise Scope"
 }

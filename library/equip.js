@@ -126,6 +126,7 @@ exports.name = {
 	"seljuq" : "F.C.S",
 	"elven forest maker" : "Special Frame for Rough Terrain",
 	"dark elven forest ranger" : "Ranger's Combat Equipment Set",
-	"enhanced scope" = "Enhanced Ultra-Precise Scope",
-	"eups" = "Enhanced Ultra-Precise Scope"
+	"enhanced scope" : "Enhanced Ultra-Precise Scope",
+	"eups" : "Enhanced Ultra-Precise Scope",
+	"tyrant" : "Runaway Inducement OS"
 }

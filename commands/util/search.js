@@ -23,9 +23,9 @@ class Search extends commando.Command {
                 const $ = cheerio.load(html);
                 var max = 6
                 for (var i = 1; i < max; i++) {
-                    let tex = $('.Results li:nth-child(' + i + ') article h1 a').text()
-                    let li = $('.Results li:nth-child(' + i + ') article h1 a').attr('href')
-                    let vid = $('.Results li:nth-child(' + i + ') h1 a').text()
+                    let tex = $('.unified-search__results li:nth-child(' + i + ') article h1 a').text()
+                    let li = $('.unified-search__results li:nth-child(' + i + ') article h1 a').attr('href')
+                    let vid = $('.unified-search__results li:nth-child(' + i + ') h1 a').text()
                     if (tex != null && li != null) {
                         out = out + tex + ": <" + li + ">\n"
                     }

@@ -45,6 +45,16 @@ class Image extends commando.Command {
 						embed.setURL(link)
 						pages.push(embed)
 					}
+					else {
+						img = $(elem).find("img").attr("src");
+						img = img.split("/scale-to-width-down/")[0]
+						console.log(img)
+						let embed = new Discord.RichEmbed()
+						embed.setTitle(unit)
+						embed.setImage(img)
+						embed.setURL(link)
+						pages.push(embed)
+					}
 				})
 				$(".image.lightbox").each(function(i, elem){
 			  		let img = $(elem).find("img").attr("data-src");

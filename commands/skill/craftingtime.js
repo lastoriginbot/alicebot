@@ -30,7 +30,7 @@ class Time extends commando.Command {
 				let check = false;
 				let pages = [];
 				const $ = cheerio.load(html);
-        			let siz = $(".mw-content-ltr.mw-content-text table tbody").first().find("tr").length;
+        			let siz = $(".mw-parser-output table tbody").first().find("tr").length;
         			for (var i =2 ; i<=siz; i++) {
           				let ti = $(".mw-content-ltr.mw-content-text table tbody tr:nth-child(" +i+ ") td:nth-child(4)").first().text()
           				if (time.toLowerCase() == ti.trim().toLowerCase())
@@ -55,7 +55,7 @@ class Time extends commando.Command {
         			if (pages.length > 0) {sende(message, pages)}
         			else {
 					let unit = nameChange(time);
-					let siz = $(".mw-content-ltr.mw-content-text table tbody").first().find("tr").length;
+					let siz = $(".mw-parser-output table tbody").first().find("tr").length;
         				for (var i =2 ; i<=siz; i++) {
           					let na = $(".mw-content-ltr.mw-content-text table tbody tr:nth-child(" +i+ ") td:nth-child(2)").first().text().trim()
           					if (unit.toLowerCase() == na.toLowerCase())

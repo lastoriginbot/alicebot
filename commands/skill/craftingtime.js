@@ -32,15 +32,15 @@ class Time extends commando.Command {
 				const $ = cheerio.load(html);
         			let siz = $(".mw-parser-output table tbody").first().find("tr").length;
         			for (var i =2 ; i<=siz; i++) {
-          				let ti = $(".mw-content-ltr.mw-content-text table tbody tr:nth-child(" +i+ ") td:nth-child(4)").first().text()
+          				let ti = $(".mw-parser-output table tbody tr:nth-child(" +i+ ") td:nth-child(4)").first().text()
           				if (time.toLowerCase() == ti.trim().toLowerCase())
           				{
-						let unit = $(".mw-content-ltr.mw-content-text table tbody tr:nth-child(" +i+ ") td:nth-child(2)").first().text().trim()
+						let unit = $(".mw-parser-output table tbody tr:nth-child(" +i+ ") td:nth-child(2)").first().text().trim()
 						console.log(unit)
 						let link2 = "https://lastorigin.fandom.com/wiki/" + urlencode(unit)
-						let img = $(".mw-content-ltr.mw-content-text table tbody tr:nth-child(" +i+ ") td:nth-child(1) div a img").first().attr("data-src")
+						let img = $(".mw-parser-output table tbody tr:nth-child(" +i+ ") td:nth-child(1) div a img").first().attr("data-src")
 						if (!img) {
-							img = $(".mw-content-ltr.mw-content-text table tbody tr:nth-child(" +i+ ") td:nth-child(1) div a img").first().attr("src")
+							img = $(".mw-parser-output table tbody tr:nth-child(" +i+ ") td:nth-child(1) div a img").first().attr("src")
 						}
 						img = img.split("/scale-to-width-down/")[0]
 						img = img + "/scale-to-width-down/120"
@@ -57,10 +57,10 @@ class Time extends commando.Command {
 					let unit = nameChange(time);
 					let siz = $(".mw-parser-output table tbody").first().find("tr").length;
         				for (var i =2 ; i<=siz; i++) {
-          					let na = $(".mw-content-ltr.mw-content-text table tbody tr:nth-child(" +i+ ") td:nth-child(2)").first().text().trim()
+          					let na = $(".mmw-parser-output table tbody tr:nth-child(" +i+ ") td:nth-child(2)").first().text().trim()
           					if (unit.toLowerCase() == na.toLowerCase())
           					{
-            						pages.push($(".mw-content-ltr.mw-content-text table tbody tr:nth-child(" +i+ ") td:nth-child(4)").first().text().trim())
+            						pages.push($(".mw-parser-output table tbody tr:nth-child(" +i+ ") td:nth-child(4)").first().text().trim())
             					}
 					}
 					if (pages.length > 0) {message.channel.send(pages.join("\n"))}

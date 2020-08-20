@@ -27,7 +27,7 @@ class Search extends commando.Command {
                     let li = $('.unified-search__results li:nth-child(' + i + ') article h1 a').attr('href')
                     let vid = $('.unified-search__results li:nth-child(' + i + ') h1 a').text()
                     if (tex != null && li != null) {
-                        out = out + tex + ": <" + li + ">\n"
+                        out = out + tex + ": <" + li.trim() + ">\n"
                     }
                     if (vid == "Videos for '" + input + "'") {
                         max++;

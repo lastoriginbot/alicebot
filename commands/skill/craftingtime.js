@@ -57,7 +57,7 @@ class Time extends commando.Command {
 					let unit = nameChange(time);
 					let siz = $(".mw-parser-output table tbody").first().find("tr").length;
         				for (var i =2 ; i<=siz; i++) {
-          					let na = $(".mmw-parser-output table tbody tr:nth-child(" +i+ ") td:nth-child(2)").first().text().trim()
+          					let na = $(".mw-parser-output table tbody tr:nth-child(" +i+ ") td:nth-child(2)").first().text().trim()
           					if (unit.toLowerCase() == na.toLowerCase())
           					{
             						pages.push($(".mw-parser-output table tbody tr:nth-child(" +i+ ") td:nth-child(4)").first().text().trim())

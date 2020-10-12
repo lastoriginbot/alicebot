@@ -51,7 +51,7 @@ class Equip extends commando.Command {
 				const $ = cheerio.load(html);
 				let siz = $(".wikitable.sortable tbody").find('tr').length
 				for (var i = 2; i<=siz; i++) {
-					let name = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(2)").html()
+					let name = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(2) a").html()
 					name = te(name)
 					console.log(name)
 					if (name) {

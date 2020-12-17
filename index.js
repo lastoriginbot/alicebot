@@ -6,7 +6,7 @@ const bot = new commando.CommandoClient({
     unknownCommandResponse: false
 });
 bot.on('ready', () => {
-    bot.user.setActivity('Only &skill, for now');
+    bot.user.setActivity('&help for, well, help');
 });
 bot.registry.registerGroup('find', 'Find');
 bot.registry.registerGroup('quiz', 'Quiz');

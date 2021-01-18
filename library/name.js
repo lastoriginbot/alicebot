@@ -456,5 +456,11 @@ exports.name = {
   "snow" : "Snow Feather",
   "sf" : "Snow Feather" ,
   "mr.alfred" : "Mr.Alfred",
-  "mr alfred" : "Mr.Alfred"
+  "mr alfred" : "Mr.Alfred",
+  "lemonade" : "Lemonade Alpha",
+  "alpha" : "Lemonade Alpha",
+  "la" : "Lemonade Alpha",
+  "hrae" : "Hraesvelgr",
+  "kk" : "Kunoichi Kaen",
+  "kz" : "Kunoichi Zero"
 }

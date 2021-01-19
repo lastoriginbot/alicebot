@@ -32,6 +32,7 @@ class Skill extends commando.Command {
                 		var pages = []
                 		const $ = cheerio.load(html);
                 		$('.wikitable.skilltable').each(function(i, elem) {
+							console.log(elem)
 					check = true
                     			let $2 = cheerio.load(elem);
                     			let siz = $2('.wikitable.skilltable tbody').find('tr').length

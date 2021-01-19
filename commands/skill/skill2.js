@@ -34,7 +34,7 @@ class Skill extends commando.Command {
                 		$('.wikitable.skilltable').each(function(i, elem) {
 							console.log(elem)
 					check = true
-                    			let $2 = cheerio.load(elem);
+                    			let $2 = cheerio.load($.html(this));
                     			let siz = $2('.wikitable.skilltable tbody').find('tr').length
                     			let img = $2('.wikitable.skilltable tbody tr td table tbody tr td div a img').attr('data-src')
                     			if (!img) {img = $2('.wikitable.skilltable tbody tr td table tbody tr td div a img').attr('src')}

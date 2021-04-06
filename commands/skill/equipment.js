@@ -60,7 +60,7 @@ class Equip extends commando.Command {
 					console.log(name)
 					pages = []
 					if (name) {
-						if (name.toLowerCase() == gear) {
+						if (rankRemove(name.toLowerCase()) == gear) {
 							check = true
 							let img = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td a img").attr('data-src')
 							if (!img) {img = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td a img").attr('src')}

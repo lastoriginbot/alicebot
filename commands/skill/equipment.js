@@ -28,6 +28,7 @@ class Equip extends commando.Command {
 		gear = gear.toLowerCase()
 		var li = gear.split(" ")
 		var li2 = li[li.length-1]
+		var li3 = li[0]
 		var link 
 		if (li2 == "chip") {
 			link = "https://lastorigin.fandom.com/wiki/Sub:Equipment/Chips"
@@ -43,6 +44,9 @@ class Equip extends commando.Command {
 		else if (li2 == "os") {
 			link = "https://lastorigin.fandom.com/wiki/Sub:Equipment/OS"
 		}
+		else if (li3 == "rogue"){
+			link = "https://lastorigin.fandom.com/wiki/Sub:Equipment/OS"
+		}
 		else {link = "https://lastorigin.fandom.com/wiki/Sub:Equipment/Gears"}
 
 		request(link, function(err, resp, html) {
@@ -54,6 +58,7 @@ class Equip extends commando.Command {
 					let name = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(2) a").html()
 					name = te(name)
 					console.log(name)
+					pages = []
 					if (name) {
 						if (name.toLowerCase() == gear) {
 							check = true
@@ -77,12 +82,12 @@ class Equip extends commando.Command {
 							if (note) {embed.addField("Note", note)}
 							if (exp) {embed.addField("EXP to Max", exp)}
 							embed.setFooter("Effects within square brackets are applied as combat buffs/debuffs.")
-							message.channel.send(embed)
-							break
+							pages.push(embed)
 						}
 					}
 				}
-				if (!check) {message.channel.send("Wrong name")}
+				if (pages.length > 0) {sende(message, pages)}
+				else {message.channel.send("Wrong Name")}
 			}
 		})
 	}
@@ -92,6 +97,14 @@ function nameChange(unit) {
 	if (name3[unit2]) {unit2 = name3[unit2];}
 	unit2 = unit2.toLowerCase()
 	if (name2[unit2]) {unit2 = name2[unit2];}
+	return unit2
+}
+function rankRemove(unit) {
+	var unit2 = unit
+	var li = gear.split(" ")
+	if (li.length > 1 && (li[li.length-1] == "b" || li[li.length-1] == "a" || li[li.length-1] == "s" || li[li.length-1] == "ss" || li[li.length-1] == "sss")) {
+		unit2 = " ".join(li[:li.length-2])
+	}
 	return unit2
 }
 function te(output) {

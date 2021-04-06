@@ -102,7 +102,7 @@ function nameChange(unit) {
 }
 function rankRemove(unit) {
 	var unit2 = unit
-	var li = gear.split(" ")
+	var li = unit.split(" ")
 	if (li.length > 1 && (li[li.length-1] == "b" || li[li.length-1] == "a" || li[li.length-1] == "s" || li[li.length-1] == "ss" || li[li.length-1] == "sss")) {
 		li.pop()
 		unit2 = " ".join(li)

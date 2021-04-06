@@ -54,11 +54,12 @@ class Equip extends commando.Command {
 				var check = false
 				const $ = cheerio.load(html);
 				let siz = $(".wikitable.sortable tbody").find('tr').length
+				var pages = []
 				for (var i = 2; i<=siz; i++) {
 					let name = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(2) a").html()
 					name = te(name)
 					console.log(name)
-					pages = []
+					
 					if (name) {
 						if (rankRemove(name.toLowerCase()) == gear) {
 							check = true

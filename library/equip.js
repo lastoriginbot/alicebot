@@ -128,5 +128,8 @@ exports.name = {
 	"dark elven forest ranger" : "Ranger's Combat Equipment Set",
 	"enhanced scope" : "Enhanced Ultra-Precise Scope",
 	"eups" : "Enhanced Ultra-Precise Scope",
-	"tyrant" : "Runaway Inducement OS"
+	"tyrant" : "Runaway Inducement OS",
+	"ball" : "Crystal Ball of Fate",
+	"recycler" : "Recycling Module",
+	"trash can" : "Recycling Module"
 }

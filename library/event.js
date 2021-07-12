@@ -58,4 +58,9 @@ exports.name = {
   "project" : "https://arca.live/b/lastorigin/24727700",
   "muse" : "https://arca.live/b/lastorigin/24727700",
   "idol" : "https://arca.live/b/lastorigin/24727700",
+  "lightless sanctuary" : "https://arca.live/b/lastorigin/29792513",
+  "sanctuary" : "https://arca.live/b/lastorigin/29792513",
+  "angel" : "https://arca.live/b/lastorigin/29792513",
+  "church" : "https://arca.live/b/lastorigin/29792513",
+  "kouhei" : "https://arca.live/b/lastorigin/29792513",
 }

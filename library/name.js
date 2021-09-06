@@ -480,4 +480,10 @@ exports.name = {
   "fatass" : "Fotia",
   "teacher" : "Alexandra",
   "office lady" : "HongRyeon",
+  "boot" : "JangHwa",
+	"boots" : "JangHwa",
+	"lion" : "Queen of Mane",
+	"spider" : "Arachne",
+	"sa" : "Strato Angel",
+	
 }

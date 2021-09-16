@@ -1,6 +1,8 @@
 exports.name = {
   "story" : "https://arca.live/b/lastorigin/8093548",
   "main story" : "https://arca.live/b/lastorigin/8093548",
+  "endless" : "https://arca.live/b/lastorigin/23964181",
+  "endless war" : "https://arca.live/b/lastorigin/23964181",
 	"dinner" : "https://arca.live/b/lastorigin/8152743",
   "supreme dinner" : "https://arca.live/b/lastorigin/8152743",
   "sowan" : "https://arca.live/b/lastorigin/8152743",
@@ -63,4 +65,8 @@ exports.name = {
   "angel" : "https://arca.live/b/lastorigin/29792513",
   "church" : "https://arca.live/b/lastorigin/29792513",
   "kouhei" : "https://arca.live/b/lastorigin/29792513",
+  "rose" : "https://arca.live/b/lastorigin/33220724",
+  "lotus" : "https://arca.live/b/lastorigin/33220724",
+  "janghwa" : "https://arca.live/b/lastorigin/33220724",
+  "rose that blooms atop of lotus" : "https://arca.live/b/lastorigin/33220724",
 }

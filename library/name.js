@@ -485,5 +485,10 @@ exports.name = {
 	"lion" : "Queen of Mane",
 	"spider" : "Arachne",
 	"sa" : "Strato Angel",
-	
+	"sexmet" : "Sekhmet",
+	"rose" "JangHwa",
+	"hr" : "HongRyeon",
+	"mm" : "MoMo",
+	"bt" : "BaekTo",
+	"br" : "BoRyeon"
 }

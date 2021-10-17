@@ -486,7 +486,7 @@ exports.name = {
 	"spider" : "Arachne",
 	"sa" : "Strato Angel",
 	"sexmet" : "Sekhmet",
-	"rose" "JangHwa",
+	"rose" : "JangHwa",
 	"hr" : "HongRyeon",
 	"mm" : "MoMo",
 	"bt" : "BaekTo",

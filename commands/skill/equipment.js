@@ -53,40 +53,40 @@ class Equip extends commando.Command {
 			if (!err) {
 				var check = false
 				const $ = cheerio.load(html);
-				let siz = $(".wikitable.sortable tbody").find('tr').length
 				var pages = []
-				for (var i = 2; i <= siz; i++) {
-					let name = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(2) a").html()
-					name = te(name)
-					console.log(name)
-
-					if (name) {
-						if (rankRemove(name.toLowerCase()) == gear) {
-							check = true
-							let img = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td a img").attr('data-src')
-							if (!img) { img = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td a img").attr('src') }
-							let eff = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(3)").html()
-							eff = te(eff)
-							let note = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(4)").text()
-							note = te(note)
-							let exp = $(".wikitable.sortable tbody tr:nth-child(" + i + ") td:nth-child(5)").text()
-							exp = te(exp)
-							let embed = new Discord.RichEmbed()
-							img = img.split("/scale-to-width-down/")[0]
-							console.log(img)
-							embed.setTitle(name)
-							embed.setThumbnail(img)
-							let link2 = "https://lastorigin.fandom.com/wiki/" + urlencode(name);
-							console.log(link2)
-							embed.setURL(link2)
-							embed.addField("Effect", eff)
-							if (note) { embed.addField("Note", note) }
-							if (exp) { embed.addField("EXP to Max", exp) }
-							embed.setFooter("Effects within square brackets are applied as combat buffs/debuffs.")
-							pages.push(embed)
+				$('.wikitable tbody tr').each(function (i, elem) {
+					let tags = $(this).children().eq(1).find('a')
+					if (tags.length > 0) {
+						let name = tags.eq(0).html()
+						name = te(name)
+						if (name) {
+							if (rankRemove(name.toLowerCase()) == gear) {
+								check = true
+								let img = $(this).children().eq(0).find('a').find('img').eq(0).attr('data-src')
+								if (!img) { img = $(this).children().eq(0).find('a').find('img').eq(0).attr('src') }
+								let eff = $(this).children().eq(2).html()
+								eff = te(eff)
+								let note = $(this).children().eq(3).text()
+								note = te(note)
+								let exp = $(this).children().eq(4).text()
+								exp = te(exp)
+								let embed = new Discord.RichEmbed()
+								img = img.split("/scale-to-width-down/")[0]
+								console.log(img)
+								embed.setTitle(name)
+								embed.setThumbnail(img)
+								let link2 = "https://lastorigin.fandom.com/wiki/" + urlencode(name);
+								console.log(link2)
+								embed.setURL(link2)
+								embed.addField("Effect", eff)
+								if (note) { embed.addField("Note", note) }
+								if (exp) { embed.addField("EXP to Max", exp) }
+								embed.setFooter("Effects within square brackets are applied as combat buffs/debuffs.")
+								pages.push(embed)
+							}
 						}
 					}
-				}
+				});
 				if (pages.length > 0) { sende(message, pages) }
 				else { message.channel.send("Wrong Name") }
 			}

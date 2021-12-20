@@ -69,4 +69,8 @@ exports.name = {
   "lotus" : "https://arca.live/b/lastorigin/33220724",
   "janghwa" : "https://arca.live/b/lastorigin/33220724",
   "rose that blooms atop of lotus" : "https://arca.live/b/lastorigin/33220724",
+  "eternal's winter ark" : "https://arca.live/b/lastorigin/40090905",
+  "winter" : "https://arca.live/b/lastorigin/40090905",
+  "ark" : "https://arca.live/b/lastorigin/40090905",
+  "mnemosyne" : "https://arca.live/b/lastorigin/40090905",
 }

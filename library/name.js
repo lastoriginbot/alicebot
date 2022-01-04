@@ -490,5 +490,10 @@ exports.name = {
 	"hr" : "HongRyeon",
 	"mm" : "MoMo",
 	"bt" : "BaekTo",
-	"br" : "BoRyeon"
+	"br" : "BoRyeon",
+	"jh" : "JangHwa",
+	"ca" : "CheonA",
+	"eq" : "Ellie Quickhand",
+	"pere" : "Peregrinus",
+	"cp" : "Cyclops Princess"
 }

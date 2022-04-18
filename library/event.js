@@ -73,4 +73,9 @@ exports.name = {
   "winter" : "https://arca.live/b/lastorigin/40090905",
   "ark" : "https://arca.live/b/lastorigin/40090905",
   "mnemosyne" : "https://arca.live/b/lastorigin/40090905",
+  "chibi" : "https://arca.live/b/lastorigin/47569129",
+  "companion" : "https://arca.live/b/lastorigin/47569129",
+  "orca date contest" : "https://arca.live/b/lastorigin/48442785",
+  "date" : "https://arca.live/b/lastorigin/48442785",
+  "constantia" : "https://arca.live/b/lastorigin/48442785",
 }
